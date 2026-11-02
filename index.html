@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish 122 · Semana 7 · Capítulo 7 Generaciones · el imperfecto, ya no, todavía</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* SPAN 122 · Semana 3 · Capítulo 5.2 · Imágenes (2)
+   gustar-type verbs · tener que · ordinals · weather, seasons, months · naturaleza · una receta */
+
+:root{
+  --navy:#1B2E4F; --navy-light:#2E4977;
+  --terracotta:#C45D3A; --terracotta-light:#E0876A;
+  --gold:#D4A24C; --gold-light:#EBC373;
+  --sage:#6E8C5F; --sage-light:#9CB590;
+  --cream:#FBF7EE; --cream-dark:#F0E9D8;
+  --text:#1a1a1a; --text-light:#444; --text-hint:#666;
+  --soft-shadow:0 4px 16px rgba(27,46,79,0.08);
+  --tile-shadow:0 2px 8px rgba(27,46,79,0.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.55;font-size:16px;min-height:100vh;}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:9999;text-decoration:none;}
+.skip-link:focus{left:8px;top:8px;}
+*:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;}
+.app{max-width:1200px;margin:0 auto;padding:0 20px 64px;position:relative;}
+.app::before{content:'5';position:fixed;top:18px;right:24px;z-index:0;font-family:'Playfair Display',serif;font-size:9rem;font-weight:800;color:var(--navy);opacity:0.04;pointer-events:none;line-height:1;}
+
+.chap-head{margin-top:36px;padding:32px 36px;border-radius:18px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.chap-head::after{content:'';position:absolute;right:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(212,162,76,0.25),transparent 70%);}
+.header-badge{display:inline-block;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:rgba(212,162,76,0.22);color:var(--gold-light);padding:5px 12px;border-radius:20px;margin-bottom:10px;}
+.header-title{display:block;font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;line-height:1.15;margin-bottom:6px;}
+.header-subtitle{display:block;font-family:'Space Mono',monospace;font-size:0.85rem;letter-spacing:0.1em;color:var(--gold-light);text-transform:uppercase;}
+
+.prog-bar{height:8px;background:var(--cream-dark);border-radius:4px;margin:6px 0 0;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--terracotta),var(--gold));width:0%;transition:width 0.6s ease-out;}
+.completion-wrap{margin:22px 0 20px;}
+.completion-top{display:flex;align-items:center;gap:12px;}
+.completion-label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-hint);}
+.completion-score{margin-left:auto;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;letter-spacing:0.04em;color:var(--sage);background:rgba(110,140,95,0.14);padding:4px 12px;border-radius:20px;white-space:nowrap;}
+.completion-pct{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--terracotta);margin-left:14px;}
+.completion-legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.legend-pill{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.04em;padding:4px 10px;border-radius:20px;background:var(--cream-dark);color:var(--text-light);border:1px solid transparent;cursor:pointer;transition:all 0.2s;}
+.legend-pill:hover{background:#e6d9c2;color:var(--navy);}
+.legend-pill.done{background:rgba(110,140,95,0.18);border-color:var(--sage);color:var(--sage);}
+
+.submit-bar{background:var(--cream-dark);border-radius:12px;padding:14px 18px;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.submit-bar label{font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);}
+#studentName{flex:1;min-width:210px;border:2px solid #e2d5bd;border-radius:8px;background:#fff;padding:9px 13px;font-family:inherit;font-size:0.94rem;color:var(--navy);}
+#studentName:focus{outline:none;border-color:var(--gold);}
+.btn-download{background:var(--terracotta);color:#fff;border:none;border-radius:8px;padding:10px 20px;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;transition:background 0.2s,transform 0.2s;}
+.btn-download:hover{background:var(--terracotta-light);transform:translateY(-1px);}
+.submit-hint{width:100%;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);letter-spacing:0.04em;}
+
+.quiz-item{background:var(--cream);border-radius:12px;padding:16px 18px;margin-bottom:14px;border-left:4px solid var(--sage);}
+.quiz-item.correct{background:#eef6ea;border-left-color:var(--sage);}
+.quiz-item.wrong{background:#fbeceb;border-left-color:var(--terracotta);}
+.quiz-q{font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.quiz-q .qnum{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-hint);font-weight:400;margin-right:6px;}
+.quiz-gloss{font-size:0.8rem;color:var(--text-hint);font-style:italic;margin-bottom:12px;}
+.quiz-options{display:grid;gap:7px;}
+.quiz-opt{display:flex;align-items:flex-start;gap:10px;background:#fff;border:2px solid var(--cream-dark);border-radius:9px;padding:9px 13px;font-size:0.88rem;cursor:pointer;text-align:left;font-family:inherit;color:var(--text);width:100%;transition:border-color 0.2s,background 0.2s;}
+.quiz-opt:hover{border-color:var(--sage-light);background:#fbfaf6;}
+.quiz-opt.selected{border-color:var(--navy);background:#f3f5fa;}
+.quiz-opt.is-correct{border-color:var(--sage);background:#eef6ea;}
+.quiz-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;}
+.quiz-opt .letter{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);flex-shrink:0;margin-top:2px;}
+.quiz-explain{font-size:0.84rem;margin-top:10px;padding:10px 13px;border-radius:8px;background:#fff;border-left:3px solid var(--gold);display:none;}
+.quiz-explain.show{display:block;}
+.res-check{margin-top:12px;padding-top:12px;border-top:1px dashed var(--cream-dark);}
+.res-check .rc-label{font-family:'Space Mono',monospace;font-size:0.57rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);margin-bottom:6px;}
+.res-check .rc-q{font-size:0.83rem;margin-bottom:4px;color:var(--text);}
+.res-check .rc-gloss{font-size:0.73rem;color:var(--text-hint);font-style:italic;margin-bottom:8px;}
+.res-check .quiz-opt{font-size:0.8rem;padding:7px 11px;}
+
+.task-input{width:100%;border:none;border-bottom:2px solid var(--cream-dark);background:transparent;font-family:inherit;font-size:0.92rem;color:var(--navy);padding:5px 6px;}
+.task-input:focus{outline:none;border-bottom-color:var(--gold);}
+.task-fb{font-family:'Space Mono',monospace;font-size:0.66rem;margin-top:6px;display:none;}
+.task-fb.show{display:block;}
+.task-fb.ok{color:var(--sage);}
+.task-fb.ng{color:var(--terracotta);}
+.task-row{display:flex;align-items:center;gap:10px;background:var(--cream);border-radius:9px;padding:11px 14px;margin-bottom:9px;flex-wrap:wrap;}
+.task-row .rnum{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);min-width:20px;}
+.task-tag{font-family:'Space Mono',monospace;font-size:0.6rem;background:var(--cream-dark);color:var(--navy);padding:3px 9px;border-radius:4px;white-space:nowrap;}
+
+.nav{display:flex;gap:4px;flex-wrap:wrap;background:#fff;padding:6px;border-radius:14px;box-shadow:var(--tile-shadow);margin-bottom:24px;}
+.tab{flex:1 1 auto;min-width:110px;padding:12px 14px;background:transparent;border:none;border-radius:10px;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;font-weight:600;color:var(--text-light);cursor:pointer;transition:all 0.18s ease;min-height:44px;}
+.tab:hover{background:var(--cream-dark);color:var(--navy);}
+.tab.active{background:var(--navy);color:#fff;box-shadow:0 2px 6px rgba(27,46,79,0.25);}
+
+.sec{display:none;animation:fadein 0.3s ease;}
+.sec.active{display:block;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.sec-sub{font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.12em;color:var(--terracotta);text-transform:uppercase;margin-bottom:22px;}
+
+.week-hero{background:#fff;padding:26px 30px;border-radius:14px;margin-bottom:24px;box-shadow:var(--tile-shadow);border-left:5px solid var(--terracotta);}
+.week-hero h1{font-family:'Playfair Display',serif;font-size:1.55rem;color:var(--navy);margin-bottom:8px;}
+.week-hero p{font-size:0.97rem;color:var(--text-light);margin-bottom:14px;}
+.topic-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{display:inline-block;padding:5px 11px;background:var(--cream-dark);color:var(--navy);border-radius:14px;font-size:0.78rem;font-weight:600;font-family:'Space Mono',monospace;letter-spacing:0.02em;}
+
+.ch-intro{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--soft-shadow);position:relative;overflow:hidden;}
+.ch-intro::before{content:'';position:absolute;left:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(196,93,58,0.25),transparent 70%);}
+.ch-intro .label{position:relative;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.ch-intro h2{position:relative;font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:10px;color:#fff;}
+.ch-intro p{position:relative;font-size:0.95rem;line-height:1.6;color:rgba(255,255,255,0.95);}
+
+.card{background:#fff;padding:22px 26px;border-radius:14px;margin-bottom:18px;box-shadow:var(--tile-shadow);}
+.card-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.card-title .pill{font-family:'Space Mono',monospace;font-size:0.65rem;background:var(--gold);color:#fff;padding:3px 9px;border-radius:12px;letter-spacing:0.1em;}
+
+.obj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+.obj{background:var(--cream);padding:14px 16px;border-radius:10px;border-left:3px solid var(--sage);display:flex;gap:11px;align-items:flex-start;}
+.obj-num{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;}
+.obj-text{font-size:0.93rem;color:var(--text);line-height:1.45;}
+
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+.res-card{background:#fff;padding:16px 18px;border-radius:12px;border-top:3px solid var(--gold);box-shadow:var(--tile-shadow);}
+.res-card-day{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--terracotta);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:5px;}
+.res-card-topic{font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);font-size:1.02rem;margin-bottom:10px;}
+.res-card a{display:block;font-size:0.84rem;color:var(--navy-light);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--cream-dark);word-break:break-word;}
+.res-card a:last-child{border-bottom:none;}
+.res-card a:hover{color:var(--terracotta);}
+.res-card a::before{content:'→ ';color:var(--gold);font-weight:700;}
+
+.vocab-hint{text-align:center;font-size:0.82rem;color:var(--text-hint);font-style:italic;margin-bottom:14px;}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;}
+.vocab-card{perspective:1000px;height:118px;cursor:pointer;}
+.vocab-card-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+.vocab-card.flipped .vocab-card-inner{transform:rotateY(180deg);}
+.vocab-front,.vocab-back{position:absolute;width:100%;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;border-radius:11px;text-align:center;box-shadow:var(--tile-shadow);}
+.vocab-front{background:#fff;border:2px solid var(--cream-dark);font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);font-size:0.98rem;}
+.vocab-front small{display:block;font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--text-hint);font-weight:400;margin-top:5px;letter-spacing:0.04em;}
+.vocab-back{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-light));color:#fff;transform:rotateY(180deg);font-size:0.92rem;font-weight:600;}
+.vocab-ex{display:block;font-size:0.74rem;font-weight:400;font-style:italic;margin-top:6px;opacity:0.92;padding:0 18px;}
+.vocab-sound{position:absolute;top:6px;right:9px;font-size:0.75rem;opacity:0.55;}
+.vocab-replay{position:absolute;bottom:6px;right:8px;background:rgba(255,255,255,0.22);border:none;border-radius:50%;width:30px;height:30px;font-size:0.85rem;cursor:pointer;color:#fff;line-height:30px;padding:0;}
+.vocab-replay:hover,.vocab-replay:focus-visible{background:rgba(255,255,255,0.4);outline:2px solid #fff;}
+.vocab-card:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:12px;}
+.vocab-card.conn-card .vocab-front{border-color:var(--sage-light);color:var(--sage);}
+.vocab-card.conn-card .vocab-back{background:linear-gradient(135deg,var(--sage),#5A7350);}
+
+.gbox{background:#fff;padding:24px 28px;border-radius:14px;margin-bottom:22px;box-shadow:var(--tile-shadow);border-top:4px solid var(--terracotta);}
+.gbox.alt{border-top-color:var(--sage);}
+.gbox.alt2{border-top-color:var(--gold);}
+.gbox h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.gbox h3 .num{font-family:'Space Mono',monospace;font-size:0.7rem;background:var(--terracotta);color:#fff;padding:4px 10px;border-radius:11px;letter-spacing:0.1em;}
+.gbox.alt h3 .num{background:var(--sage);}
+.gbox.alt2 h3 .num{background:var(--gold);color:var(--navy);}
+.gbox .sub{font-size:0.9rem;color:var(--text-hint);margin-bottom:16px;font-style:italic;}
+
+.conj-table{width:100%;border-collapse:collapse;margin:14px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(27,46,79,0.05);}
+.conj-table th,.conj-table td{padding:9px 13px;text-align:left;font-size:0.9rem;border-bottom:1px solid var(--cream-dark);}
+.conj-table th{background:var(--navy);color:#fff;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;}
+.conj-table td .pn{color:var(--text-hint);}
+.conj-table td .fm{color:var(--terracotta);font-weight:700;font-style:italic;}
+.conj-table .accent{color:var(--terracotta);font-weight:700;}
+.conj-table tr:last-child td{border-bottom:none;}
+
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:740px){.three-col{grid-template-columns:1fr;}}
+.col-card{background:var(--cream);padding:16px 18px;border-radius:10px;border-top:4px solid var(--terracotta);}
+.col-card.gd{border-top-color:var(--gold);}
+.col-card.sg{border-top-color:var(--sage);}
+.col-card h4{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--navy);margin-bottom:4px;}
+.col-card .meaning{font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--text-hint);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:10px;}
+.col-card .ex{font-style:italic;font-size:0.85rem;color:var(--text);background:#fff;padding:7px 10px;border-radius:6px;margin-bottom:5px;}
+.col-card .ex strong{color:var(--terracotta);font-style:normal;}
+.col-card.gd .ex strong{color:#A07A2D;}
+.col-card.sg .ex strong{color:var(--sage);}
+
+.ex-box{background:var(--cream);border-left:3px solid var(--sage);padding:12px 16px;border-radius:8px;margin:14px 0;}
+.ex-box p{font-size:0.9rem;color:var(--text);margin:4px 0;}
+.ex-box em{color:var(--text-hint);font-style:italic;}
+.ojo{background:#FFF6F0;border-left:4px solid var(--terracotta);padding:14px 18px;border-radius:8px;margin:16px 0;}
+.ojo-title{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--terracotta);letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:6px;}
+.ojo p{font-size:0.92rem;color:var(--text);line-height:1.55;}
+.ojo em{color:var(--terracotta);font-style:italic;font-weight:600;}
+
+.ex-item{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--cream-dark);font-size:0.97rem;}
+.ex-item:last-of-type{border-bottom:none;}
+.ex-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--cream);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;}
+.ex-text{flex:1;line-height:1.9;color:var(--text);}
+.ex-hint{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--terracotta);margin-left:4px;}
+.blk{display:inline-block;width:120px;padding:6px 10px;border:2px solid var(--cream-dark);border-radius:6px;font-family:'Source Sans 3',sans-serif;font-size:0.95rem;color:var(--navy);background:#fff;outline:none;transition:border-color 0.15s;}
+.blk.wide{width:170px;}
+.blk:focus{border-color:var(--gold);}
+.blk.ok{border-color:var(--sage);background:#F4F8F0;color:#3F5C32;}
+.blk.ng{border-color:var(--terracotta);background:#FFF0EA;color:#8E3A1F;}
+
+.chk-btn,.rst-btn,.toggle-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border:none;border-radius:8px;font-family:'Source Sans 3',sans-serif;font-size:0.92rem;font-weight:700;cursor:pointer;transition:all 0.15s;min-height:42px;margin-top:14px;}
+.chk-btn{background:var(--navy);color:#fff;}
+.chk-btn:hover{background:var(--navy-light);}
+.rst-btn{background:#fff;color:var(--navy);border:2px solid var(--cream-dark);margin-left:6px;}
+.rst-btn:hover{border-color:var(--navy);}
+.toggle-btn{background:var(--gold);color:var(--navy);margin-left:6px;}
+.toggle-btn:hover{background:var(--gold-light);}
+.res-msg{margin-top:12px;font-size:0.93rem;font-weight:700;min-height:22px;}
+.res-msg.ok{color:#3F5C32;}
+.res-msg.ng{color:#8E3A1F;}
+
+.word-bank{background:var(--cream);padding:11px 14px;border-radius:8px;margin-bottom:14px;font-size:0.88rem;}
+.word-bank-label{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:4px;}
+.word-bank-words span{display:inline-block;background:#fff;padding:3px 9px;border-radius:11px;margin:2px 3px;font-size:0.84rem;border:1px solid var(--cream-dark);color:var(--navy);font-weight:700;}
+
+/* Matching */
+.match-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.match-col-label{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-hint);margin-bottom:6px;}
+.mi{padding:11px 13px;border:2px solid var(--cream-dark);border-radius:9px;cursor:pointer;font-size:0.86rem;background:#fff;transition:all 0.12s;line-height:1.4;margin-bottom:7px;color:var(--text);}
+.mi:hover{border-color:var(--sage-light);}
+.mi.sel{border-color:var(--navy);background:#f3f5fa;color:var(--navy);}
+.mi.done{border-color:var(--sage);background:#eef6ea;color:#3F5C32;pointer-events:none;opacity:0.75;}
+.mi.bad{border-color:var(--terracotta);background:#fbeceb;}
+
+/* Conjugation game */
+.game-wrap{background:var(--cream);border-radius:14px;padding:22px;text-align:center;}
+.game-scorebar{display:flex;justify-content:center;gap:22px;margin-bottom:16px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-hint);}
+.game-scorebar b{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--terracotta);margin-top:2px;}
+.game-prompt{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy);margin:10px 0 4px;}
+.game-sub{font-size:0.85rem;color:var(--text-hint);font-style:italic;margin-bottom:18px;}
+.game-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:560px;margin:0 auto;}
+@media(max-width:520px){.game-opts{grid-template-columns:1fr;}}
+.game-opt{background:#fff;border:2px solid var(--cream-dark);border-radius:10px;padding:14px 10px;font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;transition:all 0.12s;}
+.game-opt:hover{border-color:var(--sage-light);transform:translateY(-2px);}
+.game-opt.is-correct{border-color:var(--sage);background:#eef6ea;color:#3F5C32;}
+.game-opt.is-wrong{border-color:var(--terracotta);background:#fbeceb;color:#8E3A1F;}
+.game-feedback{min-height:22px;margin-top:14px;font-weight:700;font-size:0.95rem;}
+.game-feedback.ok{color:#3F5C32;}
+.game-feedback.ng{color:#8E3A1F;}
+.game-done{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);}
+
+.cult-card{background:linear-gradient(135deg,var(--sage) 0%,#5A7350 100%);color:#fff;padding:24px 28px;border-radius:14px;margin-bottom:18px;box-shadow:var(--soft-shadow);}
+.cult-card .label{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:6px;}
+.cult-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:12px;color:#fff;}
+.cult-card p{font-size:0.95rem;line-height:1.65;color:rgba(255,255,255,0.95);}
+.cult-card .fact-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.cult-card .fact-pills span{background:rgba(255,255,255,0.18);padding:5px 11px;border-radius:14px;font-size:0.82rem;font-weight:600;}
+
+.footer{margin-top:36px;padding:20px;text-align:center;font-family:'Space Mono',monospace;font-size:0.76rem;color:var(--text-hint);letter-spacing:0.05em;}
+
+@media(max-width:600px){
+  .chap-head{padding:24px 22px;}
+  .header-title{font-size:1.7rem;}
+  .gbox,.card,.cult-card,.ch-intro{padding:18px 20px;}
+  .three-col{grid-template-columns:1fr;}
+  .ex-item{flex-wrap:wrap;}
+}
+
+/* ── Semana 2 additions ── */
+.plan-card{background:#fff;padding:16px 18px;border-radius:12px;border-top:3px solid var(--gold);box-shadow:var(--tile-shadow);}
+.plan-card.inclass{border-top-color:var(--terracotta);}
+.plan-card.practice{border-top-color:var(--sage);}
+.plan-card ul{list-style:none;margin:0;padding:0;}
+.plan-card li{font-size:0.86rem;color:var(--text);padding:6px 0;border-bottom:1px solid var(--cream-dark);}
+.plan-card li:last-child{border-bottom:none;}
+.plan-card li::before{content:'→ ';color:var(--gold);font-weight:700;}
+
+.icon-speaker{width:14px;height:14px;display:inline-block;vertical-align:middle;}
+.vocab-sound{display:flex;align-items:center;}
+.vocab-replay{display:flex;align-items:center;justify-content:center;}
+.vocab-replay svg{width:14px;height:14px;}
+.vocab-card.sport-card .vocab-front{border-color:var(--gold-light);color:#8A6420;}
+.vocab-card.sport-card .vocab-back{background:linear-gradient(135deg,var(--gold),#B8862F);}
+.vocab-card.time-card .vocab-front{border-color:#b9c4d8;color:var(--navy-light);}
+.vocab-card.time-card .vocab-back{background:linear-gradient(135deg,var(--navy-light),var(--navy));}
+.audio-note{text-align:center;font-size:0.75rem;color:var(--text-hint);margin:-6px 0 16px;}
+
+/* The boot */
+.boot-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:center;margin:14px 0;}
+@media(max-width:740px){.boot-wrap{grid-template-columns:1fr;}}
+.boot{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-width:360px;}
+.boot div{padding:12px 10px;border-radius:8px;text-align:center;font-size:0.95rem;}
+.boot .in{background:var(--terracotta);color:#fff;font-weight:700;}
+.boot .out{background:#fff;border:2px dashed var(--cream-dark);color:var(--text-light);}
+.boot small{display:block;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.04em;opacity:0.85;font-weight:400;margin-bottom:2px;}
+.boot-legend{font-size:0.9rem;color:var(--text-light);line-height:1.6;}
+.boot-legend p{margin-bottom:8px;}
+.swatch{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:middle;margin-right:6px;}
+
+.chg{color:var(--terracotta);font-weight:700;}
+.conj-table td.nochg{color:var(--text);font-weight:400;font-style:normal;background:#FBFAF6;}
+
+.rule-list{counter-reset:rule;display:grid;gap:10px;margin:14px 0;}
+.rule{background:var(--cream);border-radius:10px;padding:13px 16px 13px 52px;position:relative;}
+.rule::before{counter-increment:rule;content:counter(rule);position:absolute;left:14px;top:13px;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:0.75rem;font-weight:700;}
+.rule h4{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--navy);margin-bottom:4px;}
+.rule p{font-size:0.9rem;color:var(--text);margin:2px 0;}
+.rule .ok{color:#3F5C32;font-weight:700;}
+.rule .no{color:#8E3A1F;text-decoration:line-through;}
+
+/* Tarea: Mi rutina deportiva */
+.task-area{width:100%;min-height:210px;border:2px solid var(--cream-dark);border-radius:10px;padding:14px 16px;font-family:inherit;font-size:0.97rem;line-height:1.6;color:var(--navy);background:#fff;resize:vertical;}
+.task-area:focus{outline:none;border-color:var(--gold);}
+.wc{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);margin-top:6px;text-align:right;}
+.checklist{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px;margin:14px 0 4px;padding:0;}
+.checklist li{background:var(--cream);border-radius:9px;padding:10px 12px 10px 38px;font-size:0.86rem;position:relative;color:var(--text-light);border:2px solid transparent;}
+.checklist li::before{content:'';position:absolute;left:12px;top:11px;width:16px;height:16px;border-radius:4px;border:2px solid #cdbf9f;background:#fff;}
+.checklist li.met{border-color:var(--sage);background:#eef6ea;color:#3F5C32;}
+.checklist li.met::before{background:var(--sage);border-color:var(--sage);}
+.checklist li.met::after{content:'';position:absolute;left:17px;top:13px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);}
+.checklist li b{color:var(--navy);}
+.model{background:#fff;border:1px dashed var(--gold);border-radius:10px;padding:14px 18px;margin:14px 0;font-size:0.92rem;line-height:1.7;}
+.model .ml{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:#A07A2D;margin-bottom:6px;display:block;}
+.model mark{background:rgba(212,162,76,0.25);padding:0 2px;border-radius:3px;color:inherit;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0;}
+.step{background:var(--cream);border-radius:10px;padding:12px 14px;font-size:0.88rem;}
+.step b{display:block;font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--terracotta);margin-bottom:4px;}
+
+
+/* ── Semana 3 additions ── */
+.vocab-card.nat-card .vocab-front{border-color:var(--sage-light);color:#4d6a40;}
+.vocab-card.nat-card .vocab-back{background:linear-gradient(135deg,#4d6a40,var(--sage));}
+.formula{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0;}
+.formula span{background:var(--cream);border-radius:9px;padding:9px 13px;font-size:0.92rem;font-weight:700;color:var(--navy);}
+.formula span small{display:block;font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-hint);font-weight:400;}
+.formula .hl{background:var(--terracotta);color:#fff;}
+.formula .hl small{color:rgba(255,255,255,0.8);}
+.formula i{font-style:normal;color:var(--text-hint);font-weight:700;}
+.season-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0;}
+@media(max-width:740px){.season-grid{grid-template-columns:1fr 1fr;}}
+.season{background:var(--cream);border-radius:10px;padding:13px 14px;border-top:4px solid var(--sage);}
+.season.s2{border-top-color:var(--gold);} .season.s3{border-top-color:var(--terracotta);} .season.s4{border-top-color:var(--navy-light);}
+.season h4{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--navy);margin-bottom:6px;}
+.season p{font-size:0.82rem;color:var(--text);margin:3px 0;}
+.season p b{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-hint);display:block;}
+.reading{background:var(--cream);border-radius:10px;padding:16px 20px;font-size:0.98rem;line-height:1.8;margin-bottom:14px;}
+.reading p{margin-bottom:10px;}
+.reading .gl{font-size:0.8rem;color:var(--text-hint);font-style:italic;}
+.rec-label{display:block;font-family:'Space Mono',monospace;font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-light);margin:14px 0 6px;}
+.rec-input{width:100%;border:2px solid var(--cream-dark);border-radius:10px;padding:11px 14px;font-family:inherit;font-size:0.97rem;color:var(--navy);background:#fff;}
+.rec-input:focus{outline:none;border-color:var(--gold);}
+.task-area.short{min-height:110px;}
+.rec-card{background:#fff;border:1px dashed var(--gold);border-radius:10px;padding:16px 20px;margin:14px 0;font-size:0.92rem;line-height:1.7;}
+.rec-card h4{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);margin-bottom:6px;}
+.rec-card ol{margin:6px 0 6px 20px;} .rec-card li{margin-bottom:3px;}
+.rec-card mark{background:rgba(212,162,76,0.25);padding:0 2px;border-radius:3px;color:inherit;}
+.rec-card .ml{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:#A07A2D;margin-bottom:6px;display:block;}
+
+/* ── Semana 4 additions ── */
+.coin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0 6px;}
+.coin{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:10px 12px;}
+.coin b{display:block;font-family:'Playfair Display',serif;font-size:1rem;}
+.coin span{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;opacity:0.85;}
+.timeline{display:flex;gap:0;margin:16px 0 10px;overflow-x:auto;padding-bottom:4px;}
+.timeline div{flex:1;min-width:92px;text-align:center;padding:30px 6px 8px;position:relative;font-size:0.84rem;color:var(--navy);font-weight:700;}
+.timeline div::before{content:'';position:absolute;left:0;right:0;top:12px;height:3px;background:var(--cream-dark);}
+.timeline div::after{content:'';position:absolute;left:50%;top:6px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--terracotta);border:2px solid #fff;box-shadow:0 0 0 2px var(--terracotta);}
+.timeline div.now::after{background:var(--sage);box-shadow:0 0 0 2px var(--sage);}
+.timeline small{display:block;font-weight:400;color:var(--text-hint);font-size:0.72rem;margin-top:2px;}
+.budget{width:100%;border-collapse:collapse;margin:12px 0 4px;font-size:0.88rem;}
+.budget td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,0.2);}
+.budget td:last-child{text-align:right;font-family:'Space Mono',monospace;font-size:0.8rem;}
+.vocab-card.trip-card .vocab-front{border-color:#e7b6a4;color:#a3492b;}
+.vocab-card.trip-card .vocab-back{background:linear-gradient(135deg,var(--terracotta),#9f4527);}
+
+/* Video Log 2 (from Video Log 1) */
+.vl-meter{margin-bottom:6px;}
+.vl-meter-top{display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-light);margin-bottom:6px;}
+.vl-meter-top #vlTime{color:var(--terracotta);font-weight:700;}
+.vl-bar{position:relative;height:12px;background:var(--cream-dark);border-radius:6px;overflow:hidden;}
+.vl-zone{position:absolute;left:50%;width:25%;top:0;bottom:0;background:rgba(110,140,95,0.28);}
+.vl-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--terracotta),var(--gold));border-radius:6px;transition:width 0.3s;opacity:0.9;}
+.vl-scale{display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:0.6rem;color:var(--text-hint);margin-top:4px;}
+.vl-note{font-size:0.78rem;color:var(--text-hint);font-style:italic;margin-top:10px;}
+.vl-part{border:2px solid var(--cream-dark);border-radius:12px;padding:16px 18px;margin-top:14px;background:#fff;transition:border-color 0.2s;}
+.vl-part.met{border-color:var(--sage);}
+.vl-part-head{display:flex;gap:12px;align-items:flex-start;}
+.vl-num{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-weight:700;font-size:0.85rem;}
+.vl-part.met .vl-num{background:var(--sage);}
+.vl-part h4{font-family:'Playfair Display',serif;font-size:1.08rem;color:var(--navy);margin-bottom:3px;}
+.vl-part .vl-desc{font-size:0.88rem;color:var(--text-light);line-height:1.5;}
+.vl-tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px;}
+.vl-tag{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.04em;padding:3px 9px;border-radius:10px;background:var(--cream-dark);color:var(--navy);}
+.vl-starters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;}
+.vl-starter{background:var(--cream);border:1px dashed var(--gold);color:#7A5A1E;border-radius:14px;padding:4px 11px;font-size:0.8rem;cursor:pointer;font-family:inherit;}
+.vl-starter:hover{background:#fff6e3;}
+.vl-part textarea{width:100%;min-height:92px;border:2px solid var(--cream-dark);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:0.95rem;line-height:1.55;color:var(--navy);resize:vertical;}
+.vl-part textarea:focus{outline:none;border-color:var(--gold);}
+.vl-part-fb{font-family:'Space Mono',monospace;font-size:0.68rem;margin-top:6px;color:var(--text-hint);}
+.vl-part-fb .ok{color:var(--sage);font-weight:700;}
+.vl-part-fb .ng{color:var(--terracotta);font-weight:700;}
+.vl-script{background:var(--cream);border-radius:10px;padding:16px 18px;font-size:0.95rem;line-height:1.75;max-height:320px;overflow:auto;}
+.vl-script p{margin-bottom:8px;}
+.vl-script b{font-family:'Space Mono',monospace;font-size:0.62rem;color:var(--terracotta);letter-spacing:0.06em;margin-right:6px;}
+.vl-errs{font-size:0.86rem;color:#8E3A1F;margin-top:8px;}
+.vl-actions{display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
+.vl-actions .rst-btn,.vl-actions .toggle-btn{margin-left:0;}
+.vl-open{cursor:pointer;}
+.vl-manual{display:flex;gap:8px;align-items:center;font-size:0.86rem;}
+.vl-modal{position:fixed;inset:0;background:rgba(27,46,79,0.72);z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;}
+.vl-modal[hidden]{display:none;}
+.vl-modal-box{background:#fff;border-radius:16px;width:min(900px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--soft-shadow);}
+.vl-modal-head{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--navy);color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem;}
+.vl-modal-head .chk-btn,.vl-modal-head .rst-btn{margin-top:0;}
+.vl-timer{font-family:'Space Mono',monospace;font-size:1.8rem;font-weight:700;color:var(--gold-light);}
+.vl-timer.in{color:#B8D8A8;}
+.vl-timer.over{color:#F4A58A;}
+.vl-zone-note{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--text-hint);padding:8px 20px;background:var(--cream);}
+.vl-prompter{padding:22px 26px;overflow:auto;font-size:1.45rem;line-height:1.7;color:var(--navy);}
+.vl-prompter p{margin-bottom:16px;}
+.vl-prompter b{display:block;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;color:var(--terracotta);text-transform:uppercase;}
+@media(max-width:600px){.vl-prompter{font-size:1.15rem;padding:16px;}}
+.vl-due{display:inline-block;background:rgba(255,255,255,0.18);padding:5px 12px;border-radius:14px;font-size:0.85rem;font-weight:700;margin-top:10px;}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px;}
+.tool{background:var(--cream);border-radius:10px;padding:14px 16px;border-top:4px solid var(--terracotta);}
+.tool.t2{border-top-color:var(--gold);} .tool.t3{border-top-color:var(--sage);} .tool.t4{border-top-color:var(--navy-light);}
+.tool h4{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--navy);margin-bottom:6px;}
+.tool p{font-size:0.86rem;color:var(--text);margin:4px 0;line-height:1.5;}
+.tool table{width:100%;border-collapse:collapse;font-size:0.84rem;margin:6px 0;}
+.tool td{padding:3px 6px;border-bottom:1px solid var(--cream-dark);}
+.tool td:first-child{color:var(--text-hint);font-family:'Space Mono',monospace;font-size:0.68rem;}
+.tool .ok{color:#3F5C32;font-weight:700;}
+
+/* ── Semana 6 additions ── */
+.hunt{background:var(--cream);border-radius:10px;padding:16px 20px;font-size:1rem;line-height:2;margin-bottom:12px;}
+.hunt .w{cursor:pointer;border-radius:4px;padding:1px 0;transition:background 0.15s;}
+.hunt .w:hover{background:rgba(212,162,76,0.25);}
+.hunt .w.sel{background:var(--gold);color:#fff;}
+.hunt .w.hit{background:var(--sage);color:#fff;}
+.hunt .w.miss{background:var(--terracotta);color:#fff;}
+.hunt .w.lost{outline:2px dashed var(--sage);}
+.hunt-count{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-hint);margin-bottom:6px;}
+.builder{border:2px solid var(--cream-dark);border-radius:12px;padding:14px 16px;margin-bottom:12px;background:#fff;}
+.builder.ok{border-color:var(--sage);background:#f3f8f0;}
+.builder.ng{border-color:var(--terracotta);}
+.builder .bq{font-size:0.86rem;color:var(--text-light);margin-bottom:8px;}
+.builder .bq b{color:var(--navy);}
+.bline{min-height:44px;border-bottom:2px dashed var(--cream-dark);display:flex;flex-wrap:wrap;gap:6px;padding:6px 0;margin-bottom:10px;}
+.bpool{display:flex;flex-wrap:wrap;gap:6px;}
+.btile{background:var(--cream);border:2px solid var(--gold-light);border-radius:8px;padding:6px 11px;font-size:0.95rem;cursor:pointer;font-family:inherit;color:var(--navy);}
+.bline .btile{background:var(--navy);color:#fff;border-color:var(--navy);}
+.btile:hover{filter:brightness(0.97);}
+.bfb{font-size:0.84rem;margin-top:8px;}
+.bfb.ok{color:#3F5C32;font-weight:700;} .bfb.ng{color:#8E3A1F;}
+.city-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 6px;}
+@media(max-width:740px){.city-grid{grid-template-columns:1fr;}}
+.city{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:12px 14px;}
+.city b{display:block;font-family:'Playfair Display',serif;font-size:1.05rem;}
+.city span{font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;text-transform:uppercase;opacity:0.85;}
+.city p{font-size:0.84rem;margin-top:6px;line-height:1.5;}
+.cult-card.sea{background:linear-gradient(135deg,var(--navy-light) 0%,var(--navy) 100%);}
+.blog-post{background:#fff;border-left:4px solid var(--terracotta);border-radius:8px;padding:12px 16px;margin-bottom:10px;}
+.blog-post .bh{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--terracotta);margin-bottom:4px;}
+.blog-post.p2{border-left-color:var(--gold);} .blog-post.p2 .bh{color:#A07A2D;}
+.blog-post.p3{border-left-color:var(--sage);} .blog-post.p3 .bh{color:#4d6a40;}
+.vocab-card.carn-card .vocab-front{border-color:#e7b6a4;color:#a3492b;}
+.vocab-card.carn-card .vocab-back{background:linear-gradient(135deg,#C45D3A,#D4A24C);}
+.vocab-card.sea-card .vocab-front{border-color:#b9c4d8;color:var(--navy-light);}
+.vocab-card.sea-card .vocab-back{background:linear-gradient(135deg,#2E4977,#1B2E4F);}
+.blk.wide{width:11.5em;max-width:100%;}
+
+/* ── Pronunciación (from the ESP 121 game) ── */
+.pr-wrap{background:#fff;border-radius:16px;box-shadow:var(--soft-shadow);padding:26px;margin-bottom:20px;}
+.pr-top{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px;}
+.pr-stat{background:var(--cream);border-radius:10px;padding:8px 14px;text-align:center;min-width:92px;}
+.pr-stat span{display:block;font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-hint);}
+.pr-stat b{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--navy);}
+.pr-level{margin-left:auto;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;background:var(--navy);color:#fff;padding:6px 12px;border-radius:20px;}
+.pr-dots{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:18px;}
+.pr-dot{width:26px;height:8px;border-radius:4px;background:var(--cream-dark);}
+.pr-dot.cur{background:var(--gold);}
+.pr-dot.done{background:var(--sage);}
+.pr-card{text-align:center;background:linear-gradient(180deg,#fff 0%,var(--cream) 100%);border:2px solid var(--cream-dark);border-radius:16px;padding:26px 18px 22px;}
+.pr-word{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:800;color:var(--navy);line-height:1.15;word-break:break-word;}
+.pr-en{font-style:italic;color:var(--text-hint);margin-top:6px;font-size:1rem;}
+.pr-tip{display:inline-block;margin-top:12px;background:#FFF6F0;border-left:4px solid var(--terracotta);border-radius:8px;padding:8px 14px;font-size:0.88rem;text-align:left;max-width:560px;}
+.pr-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px;}
+.pr-btn{display:inline-flex;align-items:center;gap:8px;border:none;border-radius:40px;padding:13px 24px;font-family:'Source Sans 3',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;min-height:50px;transition:transform 0.12s,background 0.15s;}
+.pr-btn:hover{transform:translateY(-1px);}
+.pr-btn:disabled{opacity:0.45;cursor:not-allowed;transform:none;}
+.pr-listen{background:#fff;color:var(--navy);border:2px solid var(--cream-dark);}
+.pr-mic{background:var(--terracotta);color:#fff;font-size:1.08rem;padding:14px 30px;}
+.pr-mic.rec{background:#B3261E;animation:prpulse 1.1s infinite;}
+@keyframes prpulse{0%{box-shadow:0 0 0 0 rgba(179,38,30,0.55);}70%{box-shadow:0 0 0 16px rgba(179,38,30,0);}100%{box-shadow:0 0 0 0 rgba(179,38,30,0);}}
+.pr-next{background:var(--sage);color:#fff;}
+.pr-result{margin-top:20px;display:none;}
+.pr-result.show{display:block;animation:fadein 0.3s ease;}
+.pr-meter{display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap;}
+.pr-ring{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--ring-c,#6E8C5F) calc(var(--p,0)*1%),var(--cream-dark) 0);position:relative;}
+.pr-ring::after{content:'';position:absolute;inset:11px;background:#fff;border-radius:50%;}
+.pr-ring b{position:relative;z-index:1;font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--navy);}
+.pr-msg{text-align:left;max-width:420px;}
+.pr-msg .pr-verdict{font-weight:800;font-size:1.15rem;}
+.pr-msg .pr-verdict.ok{color:#3F5C32;}
+.pr-msg .pr-verdict.ng{color:#8E3A1F;}
+.pr-heard{font-size:0.92rem;color:var(--text-light);margin-top:4px;}
+.pr-heard em{color:var(--navy);font-weight:700;font-style:normal;}
+.pr-threshold{font-family:'Space Mono',monospace;font-size:0.66rem;color:var(--text-hint);margin-top:6px;}
+.pr-words{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:14px;}
+.pr-words span{padding:4px 10px;border-radius:14px;font-weight:700;font-size:0.9rem;}
+.pr-words .hit{background:#dcebd3;color:#3F5C32;}
+.pr-words .miss{background:#f6d9d2;color:#8E3A1F;}
+.pr-interim{min-height:22px;margin-top:12px;font-size:0.9rem;color:var(--text-hint);font-style:italic;}
+.pr-warn{background:#FFF6F0;border:2px solid var(--terracotta-light);border-radius:12px;padding:14px 18px;font-size:0.92rem;margin-bottom:16px;display:none;}
+.pr-warn.show{display:block;}
+.pr-done{text-align:center;display:none;}
+.pr-done.show{display:block;animation:fadein 0.3s ease;}
+.pr-done h3{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--navy);}
+.pr-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:0.92rem;text-align:left;}
+.pr-table th{background:var(--navy);color:#fff;padding:8px 10px;font-family:'Space Mono',monospace;font-size:0.64rem;letter-spacing:0.08em;text-transform:uppercase;}
+.pr-table td{padding:8px 10px;border-bottom:1px solid var(--cream-dark);}
+.pr-stars{color:var(--gold);letter-spacing:2px;}
+@media(max-width:520px){.pr-wrap{padding:16px;}.pr-word{font-size:2rem;}.pr-level{margin-left:0;}}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="app">
+
+  <div class="chap-head">
+    <span class="header-badge">SPSCC · ESP 122 · Semana 7</span>
+    <span class="header-title">Capítulo 7 · Generaciones</span>
+    <span class="header-subtitle">Describing the Past · Life Stages &amp; Habitual Past</span>
+  </div>
+
+  <div class="completion-wrap">
+    <div class="completion-top">
+      <span class="completion-label">Mi progreso · My progress</span>
+      <span class="completion-score" id="completionScore">★ 0% correcto</span>
+      <span class="completion-pct" id="completionPct">0%</span>
+    </div>
+    <div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+    <div class="completion-legend" id="completionLegend"></div>
+  </div>
+
+  <div class="submit-bar">
+    <label for="studentName">Nombre / Name</label>
+    <input id="studentName" type="text" placeholder="Type your full name here" autocomplete="name">
+    <button class="btn-download" onclick="downloadReport()">↓ Download Report</button>
+    <span class="submit-hint">Enter your name, work through every tab, then download your report and submit it on Canvas.</span>
+  </div>
+
+  <nav class="nav" aria-label="Week 7 sections">
+    <button class="tab active" onclick="switchTab('ov',this)">Inicio</button>
+    <button class="tab" onclick="switchTab('vo',this)">Vocabulario</button>
+    <button class="tab" onclick="switchTab('gr',this)">Gramática</button>
+    <button class="tab" onclick="switchTab('ej',this)">Ejercicios</button>
+    <button class="tab" onclick="switchTab('le',this)">Lectura</button>
+    <button class="tab" onclick="switchTab('pr',this)">Pronunciación</button>
+    <button class="tab" onclick="switchTab('ta',this)">Tarea · Entrevista</button>
+    <button class="tab" onclick="switchTab('vl',this)">Video Log 3</button>
+    <button class="tab" onclick="switchTab('ju',this)">Juegos</button>
+  </nav>
+
+  <div id="main-content"></div>
+
+  <!-- ═══ INICIO ═══ -->
+  <section class="sec active" id="sec-ov">
+    <h2 class="sec-title">Semana 7 · Generaciones: ¿cómo era la vida antes?</h2>
+    <p class="sec-sub">Capítulo 7 · the imperfect · ya no / todavía · stages of life · work · Washington's apple growers</p>
+
+    <div class="ch-intro">
+      <div class="label">Empezamos el Capítulo 7 · Welcome to Week 7</div>
+      <h2>Describe how life used to be, and what has changed</h2>
+      <p>In Capítulo 6 you used the preterite to tell <em>what happened</em>. This week you learn the <strong>imperfect</strong>, the tense for describing the past: what people <em>used to do</em> (<em>mis abuelos trabajaban en el campo</em>), how things <em>were</em> (<em>hacía frío</em>), and how old someone <em>was</em> (<em>tenía diez años</em>). You will compare then and now with <strong>ya no</strong> (no longer) and <strong>todavía</strong> (still), learn the vocabulary of the <strong>stages of life</strong> and <strong>work</strong>, and read about the apple-growing families of <strong>Yakima and Wenatchee</strong>. You will also interview an older person about their work and start <strong>Video Log 3</strong>.</p>
+    </div>
+
+    <div class="week-hero">
+      <h1>What this week covers</h1>
+      <p>Everything here is graded automatically, so you can see which topics still need work before class.</p>
+      <div class="topic-chips">
+        <span class="chip">-aba, -abas, -ábamos, -aban</span>
+        <span class="chip">-ía, -ías, -íamos, -ían</span>
+        <span class="chip">4 usos del imperfecto</span>
+        <span class="chip">ya no + presente</span>
+        <span class="chip">todavía + presente</span>
+        <span class="chip">la infancia · la madurez</span>
+        <span class="chip">nacer · crecer · jubilarse</span>
+        <span class="chip">el trabajo</span>
+        <span class="chip">Yakima · Wenatchee</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Objetivos · By the end of this week you can… <span class="pill">CAP 7</span></div>
+      <div class="obj-grid">
+        <div class="obj"><span class="obj-num">1</span><span class="obj-text">Conjugate regular <strong>-ar</strong> verbs in the imperfect: <em>trabajaba, trabajábamos…</em></span></div>
+        <div class="obj"><span class="obj-num">2</span><span class="obj-text">Conjugate regular <strong>-er / -ir</strong> verbs in the imperfect: <em>comía, vivían…</em></span></div>
+        <div class="obj"><span class="obj-num">3</span><span class="obj-text">Use the imperfect for <strong>habits, states, background</strong> and <strong>age and time</strong>.</span></div>
+        <div class="obj"><span class="obj-num">4</span><span class="obj-text">Compare then and now with <strong>ya no</strong> and <strong>todavía</strong> + present.</span></div>
+        <div class="obj"><span class="obj-num">5</span><span class="obj-text">Talk about <strong>stages of life</strong>, <strong>life events</strong> and <strong>generations</strong>.</span></div>
+        <div class="obj"><span class="obj-num">6</span><span class="obj-text">Interview an older person about <strong>their work</strong> and report what they told you.</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Plan de la semana <span class="pill">SEMANA 7</span></div>
+      <div class="res-grid">
+        <div class="plan-card">
+          <div class="res-card-day">Lunes · self-guided</div>
+          <div class="res-card-topic">Vocabulario + el imperfecto</div>
+          <ul><li>Flip every flashcard</li><li>Read Gramática G1 to G3</li><li>Pronunciación</li></ul>
+        </div>
+        <div class="plan-card inclass">
+          <div class="res-card-day">Martes · en clase</div>
+          <div class="res-card-topic">¿Cómo era tu infancia?</div>
+          <ul><li>Imperfect in conversation</li><li>Stages of life and life events</li></ul>
+        </div>
+        <div class="plan-card practice">
+          <div class="res-card-day">Miércoles · práctica</div>
+          <div class="res-card-topic">Ejercicios + Lectura</div>
+          <ul><li>Ejercicios 1 to 4</li><li>Lectura · Yakima y Wenatchee</li><li>Read G4</li></ul>
+        </div>
+        <div class="plan-card inclass">
+          <div class="res-card-day">Jueves · en clase</div>
+          <div class="res-card-topic">Antes y ahora</div>
+          <ul><li>Ejercicios 5 to 7</li><li>Tarea · Entrevista</li><li>Start Video Log 3</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cult-card">
+      <div class="label">Nota cultural · Los cultivadores de manzanas de Washington</div>
+      <h3>Las familias de Yakima y Wenatchee</h3>
+      <p>Washington grows more apples than any other state: more than half of the apples sold fresh in the United States come from here. Much of that work happens in the <strong>Yakima Valley</strong> and around <strong>Wenatchee</strong>, a city that calls itself the "Apple Capital of the World." For decades, Mexican and Mexican American families have been at the heart of this industry: many grandparents arrived to work in the <em>cosecha</em> (harvest), their children grew up between the orchards and the classroom, and today their grandchildren work as farmers, engineers, teachers and business owners. Read one family's story in <em>Lectura</em>.</p>
+      <div class="fact-pills"><span>la cosecha</span><span>el huerto</span><span>los manzanos</span><span>la herencia cultural</span></div>
+    </div>
+  </section>
+
+  <!-- ═══ VOCABULARIO ═══ -->
+  <section class="sec" id="sec-vo">
+    <h2 class="sec-title">Vocabulario · Generaciones</h2>
+    <p class="sec-sub">stages of life · life events · generations · work · time expressions</p>
+    <p class="vocab-hint">Tap any card to flip it: you'll see the translation and an example, and hear both. Then practice saying them in <em>Pronunciación</em>.</p>
+    <p class="audio-note">Audio uses your browser's Spanish voice. If you hear nothing, check your volume or try Chrome or Edge.</p>
+    <div class="card"><div class="card-title">Las etapas de la vida <span class="pill">8 WORDS</span></div><div class="vocab-grid" id="fcStages"></div></div>
+    <div class="card"><div class="card-title">Los acontecimientos de la vida <span class="pill">10 VERBS</span></div><div class="vocab-grid" id="fcEvents"></div></div>
+    <div class="card"><div class="card-title">Las generaciones <span class="pill">8 WORDS</span></div><div class="vocab-grid" id="fcGen"></div></div>
+    <div class="card"><div class="card-title">El trabajo <span class="pill">12 WORDS</span></div><div class="vocab-grid" id="fcWork"></div></div>
+    <div class="card"><div class="card-title">Antes y ahora · expresiones <span class="pill">10 EXPRESSIONS</span></div><div class="vocab-grid" id="fcTime"></div></div>
+  </section>
+
+  <!-- ═══ GRAMÁTICA ═══ -->
+  <section class="sec" id="sec-gr">
+    <h2 class="sec-title">Gramática · Capítulo 7</h2>
+    <p class="sec-sub">imperfect -ar · imperfect -er / -ir · four uses · ya no and todavía</p>
+
+    <div class="gbox">
+      <h3><span class="num">G1</span>El imperfecto · verbos en -AR</h3>
+      <p class="sub">Drop <em>-ar</em> and add <strong>-aba</strong>. Only <em>nosotros</em> has a written accent.</p>
+      <table class="conj-table">
+        <thead><tr><th>Sujeto</th><th>Terminación</th><th>trabajar</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">yo</span></td><td class="accent">-aba</td><td>trabaj<strong>aba</strong></td><td>De niña, jugaba en el parque.</td></tr>
+          <tr><td><span class="pn">tú</span></td><td class="accent">-abas</td><td>trabaj<strong>abas</strong></td><td>¿Estudiabas piano?</td></tr>
+          <tr><td><span class="pn">él / ella / Ud.</span></td><td class="accent">-aba</td><td>trabaj<strong>aba</strong></td><td>Mi abuelo manejaba un tractor.</td></tr>
+          <tr><td><span class="pn">nosotros/as</span></td><td class="accent">-ábamos</td><td>trabaj<strong>ábamos</strong></td><td>Pasábamos los veranos en Yakima.</td></tr>
+          <tr><td><span class="pn">ellos / Uds.</span></td><td class="accent">-aban</td><td>trabaj<strong>aban</strong></td><td>Mis abuelos trabajaban en el campo.</td></tr>
+        </tbody>
+      </table>
+      <div class="ojo"><div class="ojo-title">¡OJO! · yo = él / ella</div><p><em>Yo trabajaba</em> and <em>ella trabajaba</em> look the same, so use the subject when it is not clear. No stem changes in the imperfect: <em>jugar → jugaba</em>, <em>pensar → pensaba</em>.</p></div>
+    </div>
+
+    <div class="gbox alt">
+      <h3><span class="num">G2</span>El imperfecto · verbos en -ER e -IR</h3>
+      <p class="sub"><em>-er</em> and <em>-ir</em> verbs share the endings <strong>-ía</strong>. Every form has an accent on the <strong>í</strong>.</p>
+      <table class="conj-table">
+        <thead><tr><th>Sujeto</th><th>Terminación</th><th>comer</th><th>vivir</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pn">yo</span></td><td class="accent">-ía</td><td>com<strong>ía</strong></td><td>viv<strong>ía</strong></td></tr>
+          <tr><td><span class="pn">tú</span></td><td class="accent">-ías</td><td>com<strong>ías</strong></td><td>viv<strong>ías</strong></td></tr>
+          <tr><td><span class="pn">él / ella / Ud.</span></td><td class="accent">-ía</td><td>com<strong>ía</strong></td><td>viv<strong>ía</strong></td></tr>
+          <tr><td><span class="pn">nosotros/as</span></td><td class="accent">-íamos</td><td>com<strong>íamos</strong></td><td>viv<strong>íamos</strong></td></tr>
+          <tr><td><span class="pn">ellos / Uds.</span></td><td class="accent">-ían</td><td>com<strong>ían</strong></td><td>viv<strong>ían</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="ex-box">
+        <p><strong>Also regular:</strong> <em>tener → tenía</em> · <em>hacer → hacía</em> · <em>querer → quería</em> · <em>poder → podía</em> · <em>salir → salía</em>.</p>
+        <p><strong>Only three irregular verbs</strong> in the whole imperfect. You will see them in the readings: <em>ser → era, eras, era, éramos, eran</em> · <em>ir → iba, ibas, iba, íbamos, iban</em> · <em>ver → veía</em>.</p>
+      </div>
+    </div>
+
+    <div class="gbox alt2">
+      <h3><span class="num">G3</span>Los 4 usos del imperfecto</h3>
+      <p class="sub">The preterite tells <em>what happened</em>. The imperfect <em>describes</em> the past.</p>
+      <div class="rule-list">
+        <div class="rule"><h4>1 · Hábitos · what used to happen</h4><p>De niño, <span class="ok">jugaba</span> al fútbol todos los días. · Mis abuelos <span class="ok">trabajaban</span> en la cosecha.</p><p><em>Clues: siempre, todos los días, cada verano, generalmente, a menudo, de niño/a</em></p></div>
+        <div class="rule"><h4>2 · Estados y descripciones · how things or people were</h4><p>Mi abuela <span class="ok">tenía</span> el pelo largo. · <span class="ok">Estábamos</span> muy contentos.</p></div>
+        <div class="rule"><h4>3 · El escenario · the background of a story</h4><p><span class="ok">Hacía</span> frío y <span class="ok">llovía</span> cuando llegamos a Yakima.</p></div>
+        <div class="rule"><h4>4 · La edad y la hora · age and time</h4><p><span class="ok">Tenía</span> diez años cuando aprendí a nadar. · <span class="ok">Eran</span> las siete de la mañana.</p></div>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · imperfect vs. preterite</div><p><em>Ayer <strong>comí</strong> tacos</em> (once, finished) · <em>De niño <strong>comía</strong> tacos los domingos</em> (used to, again and again).</p></div>
+    </div>
+
+    <div class="gbox">
+      <h3><span class="num">G4</span>Ya no y todavía + presente · Then and now</h3>
+      <p class="sub">Use them with the <strong>present tense</strong> to compare the past with today.</p>
+      <div class="three-col">
+        <div class="col-card"><h4>ya no + presente</h4><div class="meaning">no longer, not anymore</div><div class="ex">Antes vivía con mis padres, pero <strong>ya no</strong> vivo con ellos.</div><div class="ex">Mis abuelos <strong>ya no</strong> trabajan en el campo.</div></div>
+        <div class="col-card gd"><h4>todavía + presente</h4><div class="meaning">still</div><div class="ex">Mi abuela <strong>todavía</strong> cocina todos los días.</div><div class="ex"><strong>Todavía</strong> vivimos en Olympia.</div></div>
+        <div class="col-card sg"><h4>todavía no</h4><div class="meaning">not yet</div><div class="ex"><strong>Todavía no</strong> trabajo.</div><div class="ex">Mi hermano <strong>todavía no</strong> maneja.</div></div>
+      </div>
+      <div class="ojo"><div class="ojo-title">¡OJO! · present, not imperfect</div><p><em>Ya no <strong>juego</strong> al fútbol</em> (not <em>ya no jugaba</em>). The comparison is: <em>Antes <strong>jugaba</strong>… pero ya no <strong>juego</strong>.</em></p></div>
+    </div>
+  </section>
+
+  <!-- ═══ EJERCICIOS ═══ -->
+  <section class="sec" id="sec-ej">
+    <h2 class="sec-title">Ejercicios · Práctica</h2>
+    <p class="sec-sub">Ejercicio 1 · 2 · 3 · 4 · 5 · 6 · 7</p>
+    <div class="card">
+      <div class="card-title">Ejercicio 1 · El imperfecto de -AR <span class="pill">-ABA · -ABAS · -ÁBAMOS · -ABAN</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the imperfect form of the verb. Remember the accent in <em>nosotros</em>: <em>-ábamos</em>.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">De niño, yo <input class="blk" id="e1_1" data-answer="jugaba" placeholder="___"> en el parque todos los días. <span class="ex-hint">(jugar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Mis abuelos <input class="blk" id="e1_2" data-answer="trabajaban" placeholder="___"> en el campo. <span class="ex-hint">(trabajar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">¿Tú <input class="blk" id="e1_3" data-answer="estudiabas" placeholder="___"> piano cuando eras pequeño? <span class="ex-hint">(estudiar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Nosotros <input class="blk" id="e1_4" data-answer="pasábamos" placeholder="___"> los veranos en Yakima. <span class="ex-hint">(pasar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Mi madre <input class="blk" id="e1_5" data-answer="cocinaba" placeholder="___"> todos los domingos. <span class="ex-hint">(cocinar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Ustedes <input class="blk" id="e1_6" data-answer="escuchaban" placeholder="___"> la radio por la noche. <span class="ex-hint">(escuchar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">Antes, la gente <input class="blk" id="e1_7" data-answer="viajaba" placeholder="___"> en tren. <span class="ex-hint">(viajar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">Mi abuelo <input class="blk" id="e1_8" data-answer="manejaba" placeholder="___"> un tractor viejo. <span class="ex-hint">(manejar)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e1_1,e1_2,e1_3,e1_4,e1_5,e1_6,e1_7,e1_8','rs1')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e1_1,e1_2,e1_3,e1_4,e1_5,e1_6,e1_7,e1_8','rs1')">Reset</button>
+      <div class="res-msg" id="rs1" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 2 · El imperfecto de -ER e -IR <span class="pill">-ÍA · -ÍAS · -ÍAMOS · -ÍAN</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the imperfect form. Every form has an accent on the <em>í</em>.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Los domingos nosotros <input class="blk" id="e2_1" data-answer="comíamos" placeholder="___"> en casa de mi abuela. <span class="ex-hint">(comer)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Mis padres <input class="blk" id="e2_2" data-answer="vivían" placeholder="___"> en un apartamento pequeño. <span class="ex-hint">(vivir)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Cuando mi abuelo <input class="blk" id="e2_3" data-answer="tenía" placeholder="___"> veinte años, llegó a Wenatchee. <span class="ex-hint">(tener)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">En otoño <input class="blk" id="e2_4" data-answer="hacía" placeholder="___"> frío por la mañana. <span class="ex-hint">(hacer)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Mi papá <input class="blk" id="e2_5" data-answer="leía" placeholder="___"> el periódico todas las mañanas. <span class="ex-hint">(leer)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">¿Tú <input class="blk" id="e2_6" data-answer="escribías" placeholder="___"> cartas a tus abuelos? <span class="ex-hint">(escribir)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">De niña, yo <input class="blk" id="e2_7" data-answer="quería" placeholder="___"> ser veterinaria. <span class="ex-hint">(querer)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">Mis tíos <input class="blk" id="e2_8" data-answer="salían" placeholder="___"> a bailar los sábados. <span class="ex-hint">(salir)</span></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e2_1,e2_2,e2_3,e2_4,e2_5,e2_6,e2_7,e2_8','rs2')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e2_1,e2_2,e2_3,e2_4,e2_5,e2_6,e2_7,e2_8','rs2')">Reset</button>
+      <div class="res-msg" id="rs2" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 3 · ¿Por qué el imperfecto? <span class="pill">4 USOS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Every sentence is in the imperfect. Which use is it?</p>
+      <div id="usesCont"></div>
+      <div class="res-msg" id="rs3" aria-live="polite"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Ejercicio 4 · ¿Ya no o todavía? <span class="pill">ANTES Y AHORA</span></div>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>ya no</span><span>todavía</span></span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Read the whole sentence. Did it stop (<em>ya no</em>) or does it continue (<em>todavía</em>)?</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Antes vivía con mis padres, pero <input class="blk wide" id="e4_1" data-answer="ya no" placeholder="___"> vivo con ellos.</span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Mi abuela tiene noventa años y <input class="blk" id="e4_2" data-answer="todavía" placeholder="___"> cocina todos los días.</span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">De niño jugaba con legos, pero <input class="blk wide" id="e4_3" data-answer="ya no" placeholder="___"> juego con ellos.</span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Mi padre <input class="blk" id="e4_4" data-answer="todavía" placeholder="___"> trabaja en la misma fábrica: trabaja allí desde 1995.</span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">Antes escribíamos cartas; ahora <input class="blk wide" id="e4_5" data-answer="ya no" placeholder="___"> escribimos cartas, mandamos mensajes.</span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">—¿<input class="blk" id="e4_6" data-answer="todavía" placeholder="___"> vives en Olympia? —Sí, vivo aquí desde niña.</span></div>
+      <button class="chk-btn" onclick="checkBlanks('e4_1,e4_2,e4_3,e4_4,e4_5,e4_6','rs4')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e4_1,e4_2,e4_3,e4_4,e4_5,e4_6','rs4')">Reset</button>
+      <div class="res-msg" id="rs4" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 5 · Constructor de oraciones <span class="pill">ANTES Y AHORA</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Click the words in the right order. Click a word in your sentence to send it back.</p>
+      <div id="builderCont"></div>
+      <button class="chk-btn" onclick="checkBuilders()">Check Sentences</button>
+      <button class="rst-btn" onclick="resetBuilders()">Reset</button>
+      <div class="res-msg" id="rs5" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 6 · ¿Cuál es correcta? <span class="pill">ERRORES COMUNES</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Choose the only correct sentence. You'll see the explanation right away.</p>
+      <div id="placeCont"></div>
+      <div class="res-msg" id="rs6" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 7 · Respuesta corta · Tu infancia <span class="pill">SE CORRIGE SOLA</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Answer each question about yourself in a full Spanish sentence. The page checks that you used the right structure. Write the accents (<em>vivía, tenía</em>) so it can find your verbs.</p>
+      <div id="shortCont"></div>
+      <button class="chk-btn" onclick="checkShort()">Check My Answers</button>
+      <button class="rst-btn" onclick="resetShort()">Reset</button>
+      <div class="res-msg" id="rs7" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ LECTURA ═══ -->
+  <section class="sec" id="sec-le">
+    <h2 class="sec-title">Lectura · Familias de Yakima y Wenatchee</h2>
+    <p class="sec-sub">Los cultivadores de manzanas de Washington · three generations of one family</p>
+
+    <div class="card">
+      <div class="card-title">Lectura · Tres generaciones y un huerto <span class="pill">READING</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Read Marisol's story, then do the four activities below. Notice the tenses: the imperfect describes how life <em>used to be</em>; the present with <em>ya no</em> and <em>todavía</em> describes life today.</p>
+      <div class="reading" id="readingText">
+        <p>Me llamo Marisol y mi familia vive en Wenatchee, la ciudad que muchos llaman «la capital mundial de la manzana». El estado de Washington produce más de la mitad de las manzanas frescas de Estados Unidos, y muchas familias latinas de Wenatchee y del valle de Yakima trabajan en los huertos.</p>
+        <p>Mis abuelos llegaron de Michoacán, México, en 1975. Cuando eran jóvenes, trabajaban en la cosecha de manzanas. Se levantaban a las cinco de la mañana y trabajaban diez horas en el huerto. Mi abuela cuenta que en otoño hacía frío por la mañana y que los trabajadores cantaban rancheras para pasar el tiempo. Vivían en una casa pequeña cerca del huerto y no tenían coche.</p>
+        <p>Mi papá creció en Wenatchee. De niño, ayudaba a mis abuelos los fines de semana y estudiaba por las noches. Después fue a la universidad y ahora es ingeniero agrícola: usa computadoras y drones para cuidar los árboles.</p>
+        <p>Hoy mis abuelos ya no trabajan en el campo: se jubilaron hace diez años. Pero todavía viven en Wenatchee y todavía tienen tres manzanos en el jardín. Cada otoño, toda la familia se reúne para hacer empanadas de manzana con la receta de mi abuela. Para mí, esas manzanas son nuestra herencia cultural.</p>
+        <p class="gl">el huerto = orchard · la cosecha = harvest · contar = to tell (a story) · pasar el tiempo = to pass the time · cuidar = to take care of · el manzano = apple tree · reunirse = to get together · la receta = recipe</p>
+      </div>
+      <button class="toggle-btn" style="margin:0 0 14px 0;" onclick="speakReading()">Escuchar la lectura</button>
+      <button class="rst-btn" style="margin-top:0;" onclick="stopSpeak()">Stop</button>
+
+      <h4 style="font-family:'Playfair Display',serif;color:var(--navy);margin:14px 0 6px;">A · Comprensión</h4>
+      <div id="readCont"></div>
+      <div class="res-msg" id="rsRead" aria-live="polite"></div>
+
+      <h4 style="font-family:'Playfair Display',serif;color:var(--navy);margin:18px 0 6px;">B · Caza de verbos · Find the imperfect</h4>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:8px;">In paragraph 2, click every verb in the <strong>imperfect</strong>. There are <strong>8</strong>. Careful: one verb is in the preterite and one is in the present.</p>
+      <div class="hunt-count" id="huntCount">0 seleccionadas</div>
+      <div class="hunt" id="huntText"></div>
+      <button class="chk-btn" onclick="checkHunt()">Check</button>
+      <button class="rst-btn" onclick="resetHunt()">Reset</button>
+      <div class="res-msg" id="rsHunt" aria-live="polite"></div>
+
+      <h4 style="font-family:'Playfair Display',serif;color:var(--navy);margin:18px 0 6px;">C · ¿Antes o ahora?</h4>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:8px;">According to the reading, is each sentence about the past or about today?</p>
+      <div id="whenCont"></div>
+      <div class="res-msg" id="rsWhen" aria-live="polite"></div>
+
+      <h4 style="font-family:'Playfair Display',serif;color:var(--navy);margin:18px 0 6px;">D · Ya no o todavía</h4>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:8px;">Complete these sentences about the family.</p>
+      <div class="word-bank"><span class="word-bank-label">Word Bank</span><span class="word-bank-words"><span>ya no</span><span>todavía</span></span></div>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Los abuelos <input class="blk wide" id="r_1" data-answer="ya no" placeholder="___"> trabajan en el campo.</span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">Los abuelos <input class="blk" id="r_2" data-answer="todavía" placeholder="___"> viven en Wenatchee.</span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">La familia <input class="blk" id="r_3" data-answer="todavía" placeholder="___"> tiene tres manzanos en el jardín.</span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Los abuelos <input class="blk wide" id="r_4" data-answer="ya no" placeholder="___"> se levantan a las cinco para ir al huerto.</span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">El papá <input class="blk wide" id="r_5" data-answer="ya no" placeholder="___"> estudia por las noches: ahora es ingeniero.</span></div>
+      <button class="chk-btn" onclick="checkBlanks('r_1,r_2,r_3,r_4,r_5','rsRel')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('r_1,r_2,r_3,r_4,r_5','rsRel')">Reset</button>
+      <div class="res-msg" id="rsRel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ═══ PRONUNCIACIÓN ═══ -->
+  <section class="sec" id="sec-pr">
+    <h2 class="sec-title">Pronunciación · Habla y avanza</h2>
+    <p class="sec-sub">this week's vocabulary · words · phrases · sentences</p>
+    <div class="ch-intro">
+      <div class="label">Pronunciación · Your voice is the controller</div>
+      <h2>Say this week's words to unlock the next one</h2>
+      <p>Press <strong>Escucha</strong> to hear the model, then press <strong>Habla</strong> and say the word or phrase clearly. The page listens and gives you a <strong>pronunciation score</strong>. With <strong>80% or more</strong>, the next word unlocks. Below 80%, listen again and try as many times as you need. Use <strong>Chrome, Edge or Safari</strong>, allow the microphone, and find a quiet place.</p>
+    </div>
+    <div class="pr-warn" id="prWarn"></div>
+    <div class="pr-wrap" id="prGame">
+      <div class="pr-top">
+        <div class="pr-stat"><span>Puntos</span><b id="prPts">0</b></div>
+        <div class="pr-stat"><span>Palabra</span><b id="prNum">1/1</b></div>
+        <div class="pr-stat"><span>Racha</span><b id="prStreak">0</b></div>
+        <div class="pr-stat"><span>Intentos</span><b id="prTries">0</b></div>
+        <span class="pr-level" id="prLevel">Nivel 1</span>
+      </div>
+      <div class="pr-dots" id="prDots"></div>
+      <div class="pr-card" id="prCard">
+        <div class="pr-word" id="prWord">—</div>
+        <div class="pr-en" id="prEn"></div>
+        <div class="pr-tip" id="prTip" style="display:none;"></div>
+        <div class="pr-btns">
+          <button type="button" class="pr-btn pr-listen" onclick="prSpeak(1)">▶ Escucha</button>
+          <button type="button" class="pr-btn pr-listen" onclick="prSpeak(0.65)">▶ Despacio</button>
+          <button type="button" class="pr-btn pr-mic" id="prMic" onclick="prListen()">● Habla</button>
+        </div>
+        <div class="pr-interim" id="prInterim" aria-live="polite"></div>
+        <div class="pr-result" id="prResult" aria-live="polite">
+          <div class="pr-meter">
+            <div class="pr-ring" id="prRing"><b id="prScore">0%</b></div>
+            <div class="pr-msg">
+              <div class="pr-verdict" id="prVerdict"></div>
+              <div class="pr-heard" id="prHeard"></div>
+              <div class="pr-threshold">Mínimo para avanzar: 80% · Tu mejor puntuación: <span id="prBest">0%</span></div>
+            </div>
+          </div>
+          <div class="pr-words" id="prWords"></div>
+        </div>
+        <div class="pr-btns">
+          <button type="button" class="pr-btn pr-next" id="prNext" onclick="prNextWord()" disabled>Siguiente →</button>
+        </div>
+      </div>
+      <div class="pr-done" id="prDone">
+        <h3>¡Felicidades!</h3>
+        <p id="prFinal"></p>
+        <table class="pr-table"><thead><tr><th>Palabra</th><th>Mejor</th><th>Intentos</th><th>Estrellas</th></tr></thead><tbody id="prTable"></tbody></table>
+        <button type="button" class="pr-btn pr-mic" onclick="prRestart()">↺ Jugar otra vez</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">¿Cómo funciona? · How it works <span class="pill">TIPS</span></div>
+      <div class="obj-grid">
+        <div class="obj"><span class="obj-num">1</span><span class="obj-text">Listen first. Use <em>Despacio</em> to hear it slowly.</span></div>
+        <div class="obj"><span class="obj-num">2</span><span class="obj-text">Press <em>Habla</em>, wait for the red button, then speak at a normal speed.</span></div>
+        <div class="obj"><span class="obj-num">3</span><span class="obj-text">Your score compares the <strong>sounds</strong> the computer heard with the sounds of the word (b = v, ll = y, silent h…).</span></div>
+        <div class="obj"><span class="obj-num">4</span><span class="obj-text">★ 80% · ★★ 90% · ★★★ 97%. Fewer tries = more points. Your progress is included in the report.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TAREA ═══ -->
+  <section class="sec" id="sec-ta">
+    <h2 class="sec-title">Tarea · Entrevista a una persona mayor</h2>
+    <p class="sec-sub">el trabajo · el imperfecto · ya no / todavía · usted</p>
+
+    <div class="ch-intro">
+      <div class="label">Tarea de la semana · Interview and writing task</div>
+      <h2>Interview an older person about the work they used to do</h2>
+      <p>Interview a parent, grandparent, neighbor or coworker (in Spanish or in English) about a job they had when they were younger. Ask the questions below, take notes, and then write a <strong>report in Spanish</strong> in the third person: <em>Mi abuela trabajaba en…</em> Use the <strong>imperfect</strong> to describe their work, and <strong>ya no</strong> or <strong>todavía</strong> to compare it with today.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Preguntas para la entrevista <span class="pill">USTED</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:6px;">Use <em>usted</em> to be polite. Add your own follow-up questions.</p>
+      <ol class="int-q" style="margin:6px 0 4px 22px;line-height:1.9;font-size:0.95rem;">
+        <li>¿Cuántos años tenía usted cuando empezó a trabajar?</li>
+        <li>¿Dónde trabajaba? ¿Qué hacía en un día normal?</li>
+        <li>¿A qué hora empezaba y terminaba su trabajo?</li>
+        <li>¿Cómo eran sus compañeros o su jefe?</li>
+        <li>¿Qué le gustaba de su trabajo? ¿Qué era difícil?</li>
+        <li>¿Todavía trabaja allí, o ya no trabaja?</li>
+        <li>¿Qué es diferente en el trabajo de hoy?</li>
+      </ol>
+      <div class="rec-card">
+        <span class="ml">Modelo · un informe</span>
+        <h4>Mi abuelo Rafael</h4>
+        <p>Entrevisté a mi abuelo Rafael. Él <mark>tenía</mark> dieciséis años cuando empezó a trabajar en un huerto de manzanas en Yakima. <mark>Todos los días</mark> <mark>se levantaba</mark> a las cinco y <mark>trabajaba</mark> hasta las cuatro. En otoño <mark>recogía</mark> manzanas y en invierno <mark>cortaba</mark> las ramas de los árboles. Sus compañeros <mark>eran</mark> muy simpáticos y <mark>almorzaban</mark> juntos en el campo. Le gustaba trabajar al aire libre, pero el sueldo <mark>era</mark> bajo y <mark>hacía</mark> mucho frío por la mañana. Hoy mi abuelo <mark>ya no trabaja</mark>: se jubiló en 2015. Pero <mark>todavía</mark> <mark>visita</mark> el huerto con sus amigos. Él dice que ahora los trabajadores usan más máquinas que antes.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tu informe <span class="pill">8 ORACIONES O MÁS</span></div>
+      <label class="rec-label" for="recTitle" style="margin-top:0;">¿A quién entrevistaste? · nombre y relación</label>
+      <input class="rec-input" id="recTitle" type="text" placeholder="Mi abuela Rosa · mi vecino Tom · mi mamá…" autocomplete="off">
+      <label class="rec-label" for="recIng">Tus notas de la entrevista · optional</label>
+      <textarea class="task-area short" id="recIng" placeholder="16 años · huerto en Yakima · 5 a.m. …" spellcheck="false"></textarea>
+      <label class="rec-label" for="taskText">Tu informe en español</label>
+      <textarea class="task-area" id="taskText" placeholder="Entrevisté a… Él / Ella tenía … años cuando empezó a trabajar en…" spellcheck="false"></textarea>
+      <div class="wc" id="taskWc">0 oraciones · 0 palabras</div>
+      <ul class="checklist" id="taskChecklist"></ul>
+      <button class="chk-btn" onclick="checkTask()">Check My Report</button>
+      <button class="rst-btn" onclick="resetTask()">Reset</button>
+      <div class="res-msg" id="rsTask" aria-live="polite"></div>
+      <p style="font-size:0.78rem;color:var(--text-hint);font-style:italic;margin-top:10px;">This page does not save automatically. Download your report when you finish: your interview report is included in it.</p>
+    </div>
+  </section>
+
+  <!-- ═══ VIDEO LOG 3 ═══ -->
+  <section class="sec" id="sec-vl">
+    <h2 class="sec-title">Video Log 3 · Mi generación y la de mis mayores</h2>
+    <p class="sec-sub">Then and now · draft, check, practice, record</p>
+
+    <div class="ch-intro">
+      <div class="label">Video Log 3 · Generaciones</div>
+      <h2>¿Cómo es tu generación diferente de la de tus padres o abuelos?</h2>
+      <p>Record a <strong>2 to 3 minute</strong> video in Spanish comparing your generation with your parents' or grandparents' generation. Describe what life <strong>was like</strong> for them when they were your age (imperfect), what your life <strong>is like</strong> now, what <strong>no longer</strong> happens (<em>ya no</em>) and what <strong>still</strong> happens (<em>todavía</em>). Use this tab to draft each part, check the grammar as you write, and practice with a timer. Check Canvas for the due date.</p>
+      <div class="fact-pills" style="margin-top:14px;">
+        <span style="background:rgba(255,255,255,0.18);padding:5px 11px;border-radius:14px;font-size:0.82rem;font-weight:600;">1 · Escribe</span>
+        <span style="background:rgba(255,255,255,0.18);padding:5px 11px;border-radius:14px;font-size:0.82rem;font-weight:600;">2 · Revisa</span>
+        <span style="background:rgba(255,255,255,0.18);padding:5px 11px;border-radius:14px;font-size:0.82rem;font-weight:600;">3 · Practica</span>
+        <span style="background:rgba(255,255,255,0.18);padding:5px 11px;border-radius:14px;font-size:0.82rem;font-weight:600;">4 · Graba</span>
+      </div>
+    </div>
+
+    <div class="card vl-sticky" id="vlSummary">
+      <div class="card-title">Checklist <span class="pill" id="vlPill">0 / 8</span></div>
+      <div class="vl-meter">
+        <div class="vl-meter-top"><span id="vlWords">0 palabras</span><span id="vlTime">≈ 0:00 min</span></div>
+        <div class="vl-bar"><div class="vl-zone"></div><div class="vl-fill" id="vlFill"></div></div>
+        <div class="vl-scale"><span>0</span><span>1 min</span><span>2 min</span><span>3 min</span><span>4 min</span></div>
+      </div>
+      <ul class="checklist" id="vlChecklist"></ul>
+      <p class="vl-note">Speaking time is an estimate based on about 100 words per minute. Time yourself in <em>Modo práctica</em> for the real number.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Caja de herramientas · Useful structures <span class="pill">REFERENCIA</span></div>
+      <div class="tool-grid">
+        <div class="tool"><h4>Antes · el imperfecto</h4><p>-ar: trabaj<b>aba</b>, trabaj<b>aban</b><br>-er / -ir: com<b>ía</b>, viv<b>ían</b></p><p>Cuando mi abuela <span class="ok">tenía</span> veinte años, <span class="ok">vivía</span> en…</p><p><em>era · eran · iba · iban</em> (irregular)</p></div>
+        <div class="tool t2"><h4>Ahora · el presente</h4><p>Mi generación <span class="ok">usa</span> el celular para todo.</p><p>Hoy los jóvenes <span class="ok">trabajan</span> y <span class="ok">estudian</span> al mismo tiempo.</p></div>
+        <div class="tool t3"><h4>Ya no · todavía</h4><p>Ya no <span class="ok">escribimos</span> cartas.</p><p>Todavía <span class="ok">comemos</span> juntos los domingos.</p></div>
+        <div class="tool t4"><h4>Comparar · opinar</h4><p>más… que · menos… que · tan… como</p><p>Antes la vida era más tranquila que ahora.</p><p>Creo que… porque… · Por eso…</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Guía de grabación · Recording guide <span class="pill">6 PARTES</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:6px;">Write each part in Spanish. Click a sentence starter to add it to your draft, then finish the sentence with your own information. Each part shows a check when it meets its requirement.</p>
+      <div id="vlParts"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tu guion completo · Full script <span class="pill">PRACTICA</span></div>
+      <div class="vl-script" id="vlScript"><span class="blanktxt">Your script will appear here as you write each part.</span></div>
+      <div class="vl-errs" id="vlErrs"></div>
+      <div class="vl-actions">
+        <button class="chk-btn" onclick="openPractice()">Modo práctica · Practice mode</button>
+        <button class="toggle-btn" onclick="speakScript()">Escuchar mi guion</button>
+        <button class="rst-btn" onclick="stopSpeak()">Stop</button>
+      </div>
+      <div class="vl-actions">
+        <button class="rst-btn" style="margin-left:0;" onclick="saveDraft()">↓ Guardar borrador (.txt)</button>
+        <label class="rst-btn vl-open">↑ Abrir borrador<input type="file" accept=".txt,text/plain" onchange="openDraft(this)" hidden></label>
+        <button class="rst-btn" onclick="resetVL()">Borrar todo</button>
+      </div>
+      <p class="vl-note">This page does not save automatically. Use <strong>Guardar borrador</strong> before you close it, and <strong>Abrir borrador</strong> to keep working later. Your script is also included in the downloaded report.</p>
+      <div class="res-msg" id="rsVL" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Antes de grabar · Before you record <span class="pill">TIPS</span></div>
+      <div class="steps">
+        <div class="step"><b>No leas</b>Turn your script into short notes. Glance at them, then look at the camera.</div>
+        <div class="step"><b>Muestra una foto</b>An old family photo on screen makes the comparison come alive.</div>
+        <div class="step"><b>Practica dos veces</b>Use <em>Modo práctica</em> and aim for 2:00 to 3:00.</div>
+        <div class="step"><b>Habla a la cámara</b>Talk to your viewer: <em>¡Hola! Hoy les voy a hablar de mi abuela y de mi generación.</em></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="vl-modal" id="vlModal" role="dialog" aria-modal="true" aria-labelledby="vlModalTitle" hidden>
+    <div class="vl-modal-box">
+      <div class="vl-modal-head">
+        <span id="vlModalTitle">Modo práctica</span>
+        <div class="vl-timer" id="vlTimer">0:00</div>
+        <div>
+          <button class="chk-btn" id="vlTimerBtn" onclick="toggleTimer()">Start</button>
+          <button class="rst-btn" onclick="resetTimer()">Reset</button>
+          <button class="rst-btn" onclick="closePractice()">Close</button>
+        </div>
+      </div>
+      <div class="vl-zone-note" id="vlZoneNote">Goal: 2:00 to 3:00</div>
+      <div class="vl-prompter" id="vlPrompter"></div>
+    </div>
+  </div>
+
+  <!-- ═══ JUEGOS ═══ -->
+  <section class="sec" id="sec-ju">
+    <h2 class="sec-title">Juegos · Play &amp; review</h2>
+    <p class="sec-sub">stages of life · imperfect forms · speed challenge · quiz</p>
+
+    <div class="card">
+      <div class="card-title">Juego 1 · Emparejamiento · La vida y el trabajo <span class="pill">MATCHING</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Click a Spanish word, then its English meaning. Correct pairs turn green.</p>
+      <div id="matchCont"></div>
+      <button class="rst-btn" style="margin-left:0;" onclick="buildMatch('w')">Shuffle / Reset</button>
+      <div class="res-msg" id="rsMatch" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 2 · Emparejamiento · ¿Cómo era? <span class="pill">IMPERFECTO</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Match each infinitive with its <em>yo</em> form in the imperfect.</p>
+      <div id="matchCont2"></div>
+      <button class="rst-btn" style="margin-left:0;" onclick="buildMatch('m')">Shuffle / Reset</button>
+      <div class="res-msg" id="rsMatch2" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 3 · Reto rápido · Completa la oración <span class="pill">12 ORACIONES</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Choose the word that completes each sentence. Accents count!</p>
+      <div class="game-wrap" id="gameWrap">
+        <div class="game-scorebar">
+          <div>Puntos<b id="gScore">0</b></div>
+          <div>Racha<b id="gStreak">0</b></div>
+          <div>Pregunta<b id="gNum">1/12</b></div>
+        </div>
+        <div class="game-prompt" id="gPrompt">…</div>
+        <div class="game-sub" id="gSub"></div>
+        <div class="game-opts" id="gOpts"></div>
+        <div class="game-feedback" id="gFb"></div>
+      </div>
+      <button class="rst-btn" style="margin-left:0;" onclick="startGame()">Restart Game</button>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Juego 4 · Opción múltiple · Capítulo 7 <span class="pill">QUIZ</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Ten questions on this week's grammar and vocabulary. Pick the best answer, then score it.</p>
+      <div id="quizCont"></div>
+      <button class="chk-btn" onclick="checkQuiz()">Score My Quiz</button>
+      <button class="rst-btn" onclick="resetQuiz()">Reset</button>
+      <div class="res-msg" id="rsQuiz" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    SPSCC · Spanish 122 · Semana 7 · Capítulo 7 · Generaciones
+  </div>
+
+</div>
+
+<script>
+/* ── Tabs ── */
+function switchTab(tab, el){
+  document.querySelectorAll('.tab').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  document.querySelectorAll('.sec').forEach(function(s){ s.classList.remove('active'); });
+  if(el){ el.classList.add('active'); el.setAttribute('aria-selected','true'); }
+  var s = document.getElementById('sec-'+tab); if(s) s.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ── Helpers ── */
+function normalize(s){ if(!s) return ''; return s.toString().trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' '); }
+function wordsOf(str){ return normalize(str).replace(/[¿?¡!.,;:"()]/g,' ').split(/\s+/).filter(Boolean); }
+function val(id){ var el=document.getElementById(id); return el?(el.value||'').trim():''; }
+function setMsg(id, ok, text){ var m=document.getElementById(id); if(!m) return; m.textContent=text; m.className='res-msg '+(ok?'ok':'ng'); }
+function showFb(id, ok, msg){ var fb=document.getElementById(id); if(!fb) return; fb.className='task-fb show '+(ok?'ok':'ng'); fb.textContent=(ok?'✓ ':'✗ ')+msg; }
+function clearFb(id){ var fb=document.getElementById(id); if(fb) fb.className='task-fb'; }
+
+/* ── Audio: browser Spanish voice (Web Speech API) ── */
+var SPK = '<svg class="icon-speaker" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+var esVoice = null;
+function pickVoice(){
+  if(!('speechSynthesis' in window)) return;
+  var vs = window.speechSynthesis.getVoices(); if(!vs || !vs.length) return;
+  var prefs = ['es-MX','es-US','es-419','es-CO','es-ES'];
+  for(var p=0;p<prefs.length;p++){ for(var i=0;i<vs.length;i++){ if((vs[i].lang||'').replace('_','-')===prefs[p]){ esVoice=vs[i]; return; } } }
+  for(var j=0;j<vs.length;j++){ if((vs[j].lang||'').toLowerCase().indexOf('es')===0){ esVoice=vs[j]; return; } }
+}
+if('speechSynthesis' in window){ pickVoice(); window.speechSynthesis.onvoiceschanged = pickVoice; }
+function speak(parts){
+  try{
+    if(!('speechSynthesis' in window)) return;
+    var synth = window.speechSynthesis; synth.cancel();
+    parts.forEach(function(t){
+      var u = new SpeechSynthesisUtterance(t.replace(/\(.*?\)/g,''));
+      u.lang = esVoice ? esVoice.lang : 'es-MX'; if(esVoice) u.voice = esVoice; u.rate = 0.9;
+      synth.speak(u);
+    });
+  }catch(e){}
+}
+function stopSpeak(){ try{ window.speechSynthesis.cancel(); }catch(e){} }
+function speakReading(){ var ps=[].slice.call(document.querySelectorAll('#readingText p:not(.gl)')).map(function(p){ return p.textContent; }); speak(ps); }
+
+var flipped = {};
+function buildFlash(key, containerId, extraClass){
+  var c = document.getElementById(containerId);
+  FC[key].forEach(function(v, i){
+    var card = document.createElement('div');
+    card.className = 'vocab-card' + (extraClass ? ' '+extraClass : '');
+    card.setAttribute('role','button'); card.setAttribute('tabindex','0');
+    card.setAttribute('aria-label', v.es + '. Flip to see the translation and hear the pronunciation.');
+    card.innerHTML = '<div class="vocab-card-inner"><div class="vocab-front">'+v.es+'<small>'+v.note+'</small><span class="vocab-sound" aria-hidden="true">'+SPK+'</span></div>' +
+      '<div class="vocab-back">'+v.en+'<span class="vocab-ex">'+v.ex+'</span>' +
+      '<button type="button" class="vocab-replay" aria-label="Play again: '+v.es.replace(/"/g,'&quot;')+'">'+SPK+'</button></div></div>';
+    function flip(){
+      var now = card.classList.toggle('flipped');
+      if(now){ speak([v.es, v.ex]); flipped[key+i]=true; updateCompletion(); }
+    }
+    card.addEventListener('click', flip);
+    card.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); flip(); } });
+    card.querySelector('.vocab-replay').addEventListener('click', function(e){ e.stopPropagation(); speak([v.es, v.ex]); });
+    c.appendChild(card);
+  });
+}
+function flashTotal(){ var n=0; for(var k in FC) n+=FC[k].length; return n; }
+function flashDone(){ return Object.keys(flipped).length; }
+
+/* ── Fill-in blanks ── */
+/* data-answer may hold alternatives separated by | ; accents are forgiven but flagged */
+function answersOf(el){ return (el.getAttribute('data-answer')||'').split('|'); }
+function blankOk(el){ var v=normalize(el.value); return v!=='' && answersOf(el).some(function(a){ return normalize(a)===v; }); }
+function blankExact(el){ var v=(el.value||'').trim().toLowerCase().replace(/\s+/g,' '); return answersOf(el).some(function(a){ return a.toLowerCase()===v; }); }
+function checkBlanks(idsCSV, resultId){
+  var ids = idsCSV.split(','), correct = 0, total = ids.length, accents = [];
+  ids.forEach(function(id){
+    var el = document.getElementById(id); if(!el) return;
+    el.classList.remove('ok','ng');
+    if(blankOk(el)){ el.classList.add('ok'); correct++; if(!blankExact(el)) accents.push(answersOf(el)[0]); }
+    else el.classList.add('ng');
+  });
+  var msg = document.getElementById(resultId);
+  if(msg){
+    var acc = accents.length ? ' Ojo con los acentos: '+accents.join(', ')+'.' : '';
+    if(correct===total){ msg.textContent='¡Perfecto! '+correct+' / '+total+' correctas. ✓'+acc; msg.className='res-msg ok'; }
+    else { msg.textContent=correct+' / '+total+' correctas. Revisa las marcadas en rojo.'+acc; msg.className='res-msg ng'; }
+  }
+  updateCompletion();
+}
+function resetBlanks(idsCSV, resultId){
+  idsCSV.split(',').forEach(function(id){ var el=document.getElementById(id); if(el){ el.value=''; el.classList.remove('ok','ng'); } });
+  var msg=document.getElementById(resultId); if(msg){ msg.textContent=''; msg.className='res-msg'; }
+  updateCompletion();
+}
+
+/* ── Multiple-choice engine ── */
+var quizState = {}, MC_SETS = {}, MC_MSG = { uses:'rs3', place:'rs6', read:'rsRead', when:'rsWhen' };
+function buildMC(data, key, containerId){
+  var container = document.getElementById(containerId); if(!container) return;
+  container.innerHTML='';
+  quizState[key] = data.map(function(){ return null; }); MC_SETS[key] = data;
+  data.forEach(function(item, i){
+    var div = document.createElement('div');
+    div.className = 'quiz-item'; div.id = key+'_item_'+i;
+    var head = '<div class="quiz-q"><span class="qnum">'+(i+1)+'.</span>'+item.q+'</div><div class="quiz-gloss">'+item.gloss+'</div>';
+    var opts = item.options.map(function(opt, j){
+      return '<button type="button" class="quiz-opt" id="'+key+'_'+i+'_'+j+'" onclick="pickMC(\''+key+'\','+i+','+j+')"><span class="letter">'+'ABCD'[j]+'</span><span>'+opt+'</span></button>';
+    }).join('');
+    div.innerHTML = head + '<div class="quiz-options">'+opts+'</div><div class="quiz-explain" id="'+key+'_exp_'+i+'"></div>';
+    container.appendChild(div);
+  });
+}
+function pickMC(key, i, j){
+  if(MC_SETS[key].instant && quizState[key][i]!==null) return;
+  quizState[key][i] = j;
+  MC_SETS[key][i].options.forEach(function(_, k){ document.getElementById(key+'_'+i+'_'+k).classList.toggle('selected', k===j); });
+  if(MC_SETS[key].instant){ revealMC(key, i); instantMsg(key); }
+  updateCompletion();
+}
+function revealMC(key, i){
+  var item = MC_SETS[key][i], chosen = quizState[key][i], ok = chosen===item.answer;
+  item.options.forEach(function(_, j){ var btn=document.getElementById(key+'_'+i+'_'+j); btn.classList.remove('is-correct','is-wrong'); if(j===item.answer) btn.classList.add('is-correct'); else if(j===chosen) btn.classList.add('is-wrong'); });
+  var exp = document.getElementById(key+'_exp_'+i); exp.className='quiz-explain show';
+  exp.innerHTML = '<strong>'+(ok?'✓ ¡Correcto!':'✗ No exactamente.')+'</strong> '+item.explain;
+  document.getElementById(key+'_item_'+i).className='quiz-item '+(ok?'correct':'wrong');
+  return ok;
+}
+function resetMC(key){
+  var data = MC_SETS[key]; quizState[key] = data.map(function(){ return null; });
+  data.forEach(function(item, i){ item.options.forEach(function(_, j){ document.getElementById(key+'_'+i+'_'+j).className='quiz-opt'; }); document.getElementById(key+'_exp_'+i).className='quiz-explain'; document.getElementById(key+'_item_'+i).className='quiz-item'; });
+}
+function mcCorrect(key){ var c=0; MC_SETS[key].forEach(function(it,i){ if(quizState[key][i]===it.answer) c++; }); return c; }
+function instantMsg(key){
+  var data=MC_SETS[key], answered = quizState[key].filter(function(x){return x!==null;}).length;
+  if(answered===data.length){ var c=mcCorrect(key); setMsg(MC_MSG[key], c===data.length, c+' / '+data.length+' correctas.'+(c===data.length?' ¡Perfecto! ✓':'')); }
+}
+
+function buildMatch(key){
+  var M = MATCH[key], c = document.getElementById(M.cont);
+  var order = M.data.map(function(_, i){ return i; });
+  for(var k=order.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=order[k]; order[k]=order[r]; order[r]=t; }
+  var aHtml = M.data.map(function(m, i){ return '<div class="mi" role="button" tabindex="0" data-side="a" data-idx="'+i+'" onclick="selMatch(\''+key+'\',this)">'+(i+1)+'. '+m.a+'</div>'; }).join('');
+  var bHtml = order.map(function(idx){ return '<div class="mi" role="button" tabindex="0" data-side="b" data-idx="'+idx+'" onclick="selMatch(\''+key+'\',this)">'+M.data[idx].b+'</div>'; }).join('');
+  c.innerHTML = '<div class="match-cols"><div><div class="match-col-label">'+M.labels[0]+'</div>'+aHtml+'</div><div><div class="match-col-label">'+M.labels[1]+'</div>'+bHtml+'</div></div>';
+  M.selA=null; M.selB=null; M.matched=0; M.finished=false;
+  document.getElementById(M.msg).textContent=''; document.getElementById(M.msg).className='res-msg';
+  updateCompletion();
+}
+function selMatch(key, el){
+  var M = MATCH[key]; if(el.classList.contains('done')) return;
+  var side = el.dataset.side;
+  document.querySelectorAll('#'+M.cont+' .mi[data-side='+side+']').forEach(function(i){ i.classList.remove('sel','bad'); });
+  el.classList.add('sel'); if(side==='a') M.selA=el; else M.selB=el;
+  if(!M.selA || !M.selB) return;
+  if(M.selA.dataset.idx === M.selB.dataset.idx){
+    M.selA.classList.remove('sel'); M.selA.classList.add('done'); M.selB.classList.remove('sel'); M.selB.classList.add('done'); M.matched++;
+    if(M.matched===M.data.length){ M.finished=true; setMsg(M.msg, true, M.done+M.matched+M.noun); }
+  } else { var bad=M.selB; bad.classList.add('bad'); setTimeout(function(){ bad.classList.remove('bad','sel'); }, 700); }
+  M.selA=null; M.selB=null; updateCompletion();
+}
+document.addEventListener('keydown', function(e){ if((e.key==='Enter'||e.key===' ') && e.target && e.target.classList && e.target.classList.contains('mi')){ e.preventDefault(); e.target.click(); } });
+
+var NOT_PRET = ('cafe aqui alli ahi asi si mi bebe menu mani aji esqui colibri jabali rubi papa mama sofa ademas tambien despues quizas segun cafes jose').split(' ');
+var CURRENCY = ['peso','pesos','quetzal','quetzales','dolar','dolares','colon','colones','sol','soles','euro','euros','boliviano','bolivianos','balboa','balboas','lempira','lempiras','guarani','guaranies','bolivar','bolivares','cordoba','cordobas'];
+var TIME_EXPR = ['ayer','anoche','anteayer','pasado','pasada','una vez'];
+function pretTokens(raw){
+  var toks = (raw||'').toLowerCase().replace(/[¿?¡!.,;:"()«»]/g,' ').split(/\s+/).filter(Boolean), set={};
+  toks.forEach(function(t){
+    var plain = t.normalize('NFD').replace(/[̀-ͯ]/g,'');
+    if(NOT_PRET.indexOf(plain)!==-1) return;
+    if(/[a-zñ]{2,}(é|í|ó)$/.test(t) || /[a-zñ]{2,}(aste|iste|aron|ieron|imos)$/.test(t)) set[t]=true;
+  });
+  return Object.keys(set);
+}
+var vlCamera = false;
+function vlText(i){ return val('vl'+i); }
+function vlAll(){ return VL_PARTS.map(function(_, i){ return vlText(i); }).filter(Boolean).join('\n'); }
+function buildVL(){
+  var c=document.getElementById('vlParts');
+  c.innerHTML = VL_PARTS.map(function(p, i){
+    return '<div class="vl-part" id="vlp'+i+'"><div class="vl-part-head"><span class="vl-num">'+(i+1)+'</span><div style="flex:1;min-width:0;"><h4>'+p.t+' · <em style="font-weight:400">'+p.es+'</em></h4><div class="vl-desc">'+p.d+'</div>'+
+      '<div class="vl-tags">'+p.tags.map(function(t){ return '<span class="vl-tag">'+t+'</span>'; }).join('')+'</div>'+
+      '<div class="vl-starters">'+p.starters.map(function(s, j){ return '<button type="button" class="vl-starter" onclick="addStarter('+i+','+j+')">+ '+s+'</button>'; }).join('')+'</div>'+
+      '<label for="vl'+i+'" style="position:absolute;left:-9999px;">Part '+(i+1)+'</label><textarea id="vl'+i+'" placeholder="Escribe aquí la parte '+(i+1)+'…" spellcheck="false"></textarea>'+
+      '<div class="vl-part-fb" id="vlfb'+i+'"></div></div></div></div>';
+  }).join('');
+  renderVL();
+}
+function addStarter(i, j){
+  var ta=document.getElementById('vl'+i), s=VL_PARTS[i].starters[j];
+  ta.value = ta.value.trim() ? ta.value.replace(/\s+$/,'')+' '+s : s;
+  ta.focus(); var pos=ta.value.indexOf('…', ta.value.length - s.length); if(pos>-1){ ta.setSelectionRange(pos, pos+1); }
+  renderVL(); updateCompletion();
+}
+function fmtMin(m){ var s=Math.round(m*60); return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2); }
+function renderVL(){
+  VL_PARTS.forEach(function(p, i){
+    var t=vlText(i), fb=document.getElementById('vlfb'+i), box=document.getElementById('vlp'+i);
+    if(!t){ fb.textContent=''; box.classList.remove('met'); return; }
+    var r=p.check(normalize(t), t); box.classList.toggle('met', r.ok);
+    fb.innerHTML = r.msg.split(' · ').map(function(x){ return '<span class="'+(x.charAt(0)==='✓'?'ok':'ng')+'">'+x+'</span>'; }).join(' · ');
+  });
+  var a=vlAnalysis(), crit=vlCriteria(), met=crit.filter(function(c){return c.met;}).length;
+  document.getElementById('vlWords').textContent = a.words+' palabras';
+  document.getElementById('vlTime').textContent = '≈ '+fmtMin(a.mins)+' min';
+  document.getElementById('vlFill').style.width = Math.min(100, a.mins/4*100)+'%';
+  document.getElementById('vlPill').textContent = met+' / '+crit.length;
+  document.getElementById('vlChecklist').innerHTML = crit.map(function(c){ return '<li class="'+(c.met?'met':'')+'"'+(c.manual?' style="cursor:pointer" role="checkbox" tabindex="0" aria-checked="'+c.met+'" onclick="toggleCamera()" onkeydown="if(event.key===\' \'||event.key===\'Enter\'){event.preventDefault();toggleCamera();}"':'')+'>'+c.label+'</li>'; }).join('');
+  var parts=VL_PARTS.map(function(p, i){ var t=vlText(i); return t?'<p><b>'+(i+1)+' · '+p.es.toUpperCase()+'</b>'+escapeHtml(t)+'</p>':''; }).join('');
+  document.getElementById('vlScript').innerHTML = parts || '<span class="blanktxt">Your script will appear here as you write each part.</span>';
+  document.getElementById('vlErrs').textContent = a.errs.length ? 'Revisa: '+a.errs.join(' · ') : (a.words>30 && a.reg.length<1 ? 'Tip: write the accents (vivía, tenía) so the checker can find your imperfect verbs.' : '');
+}
+function toggleCamera(){ vlCamera=!vlCamera; renderVL(); updateCompletion(); }
+function speakScript(){ var parts=VL_PARTS.map(function(_, i){ return vlText(i); }).filter(Boolean); if(!parts.length){ setMsg('rsVL', false, 'Escribe tu guion primero.'); return; } speak(parts); }
+/* Practice mode + timer */
+var tStart=0, tAcc=0, tInt=null;
+function openPractice(){
+  var parts=VL_PARTS.map(function(p, i){ var t=vlText(i); return t?'<p><b>'+(i+1)+' · '+p.es+'</b>'+escapeHtml(t)+'</p>':''; }).join('');
+  document.getElementById('vlPrompter').innerHTML = parts || '<p>Escribe tu guion primero.</p>';
+  document.getElementById('vlModal').hidden=false; document.getElementById('vlTimerBtn').focus();
+}
+function closePractice(){ document.getElementById('vlModal').hidden=true; if(tInt) toggleTimer(); }
+function timerNow(){ return tAcc + (tInt ? (Date.now()-tStart)/1000 : 0); }
+function paintTimer(){ var s=Math.floor(timerNow()), el=document.getElementById('vlTimer'); el.textContent=Math.floor(s/60)+':'+('0'+(s%60)).slice(-2); el.className='vl-timer'+(s>=120&&s<=180?' in':(s>180?' over':'')); document.getElementById('vlZoneNote').textContent = s<120?'Goal: 2:00 to 3:00':(s<=180?'In the target zone. ¡Muy bien!':'Over 3:00. Try to trim a little.'); }
+function toggleTimer(){ var btn=document.getElementById('vlTimerBtn'); if(tInt){ tAcc=timerNow(); clearInterval(tInt); tInt=null; btn.textContent='Start'; } else { tStart=Date.now(); tInt=setInterval(paintTimer,250); btn.textContent='Pause'; } paintTimer(); }
+function resetTimer(){ if(tInt){ clearInterval(tInt); tInt=null; } tAcc=0; document.getElementById('vlTimerBtn').textContent='Start'; paintTimer(); }
+document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !document.getElementById('vlModal').hidden) closePractice(); });
+/* Save / open draft as plain text */
+function saveDraft(){
+  var name=val('studentName')||'estudiante';
+  var txt='VIDEO LOG 3 · GENERACIONES\nEstudiante: '+name+'\n\n'+VL_PARTS.map(function(p, i){ return '### '+(i+1)+' · '+p.es+'\n'+vlText(i); }).join('\n\n')+'\n';
+  var blob=new Blob([txt],{type:'text/plain;charset=utf-8'}), url=URL.createObjectURL(blob), a=document.createElement('a');
+  a.href=url; a.download='VideoLog3_borrador_'+name.replace(/[^a-z0-9]+/gi,'_')+'.txt'; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(function(){ URL.revokeObjectURL(url); },1000);
+  setMsg('rsVL', true, 'Borrador guardado. ✓');
+}
+function openDraft(input){
+  var f=input.files && input.files[0]; if(!f) return;
+  var rd=new FileReader();
+  rd.onload=function(){
+    var chunks=String(rd.result).split(/^### (\d) · .*$/m), found=0;
+    for(var k=1;k<chunks.length;k+=2){ var i=parseInt(chunks[k],10)-1, el=document.getElementById('vl'+i); if(el){ el.value=(chunks[k+1]||'').trim(); found++; } }
+    var nm=String(rd.result).match(/^Estudiante: (.+)$/m); if(nm && !val('studentName') && nm[1]!=='estudiante') document.getElementById('studentName').value=nm[1].trim();
+    renderVL(); updateCompletion();
+    setMsg('rsVL', found>0, found>0?'Borrador abierto: '+found+' partes. ✓':'No encontré partes en este archivo. Usa un archivo de «Guardar borrador».');
+    input.value='';
+  };
+  rd.readAsText(f);
+}
+function resetVL(){ VL_PARTS.forEach(function(_, i){ document.getElementById('vl'+i).value=''; }); vlCamera=false; renderVL(); updateCompletion(); document.getElementById('rsVL').className='res-msg'; document.getElementById('rsVL').textContent=''; }
+var gIdx=0, gScore=0, gStreak=0, gFinished=false, gLock=false;
+function startGame(){
+  gIdx=0; gScore=0; gStreak=0; gFinished=false; gLock=false;
+  document.getElementById('gScore').textContent='0'; document.getElementById('gStreak').textContent='0';
+  document.getElementById('gFb').textContent=''; document.getElementById('gFb').className='game-feedback';
+  showGameQ(); updateCompletion();
+}
+function showGameQ(){
+  var q = gameData[gIdx];
+  document.getElementById('gNum').textContent = (gIdx+1)+'/'+gameData.length;
+  document.getElementById('gPrompt').textContent = q.p;
+  document.getElementById('gSub').textContent = 'Choose the missing word ('+q.h+').';
+  var opts = q.o.slice();
+  for(var k=opts.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=opts[k]; opts[k]=opts[r]; opts[r]=t; }
+  document.getElementById('gOpts').innerHTML = opts.map(function(o){ return '<button type="button" class="game-opt" onclick="pickGame(this,\''+o.replace(/'/g,"\\'")+'\')">'+o+'</button>'; }).join('');
+  gLock=false;
+}
+function pickGame(el, choice){
+  if(gLock) return; gLock=true;
+  var q = gameData[gIdx], fb = document.getElementById('gFb'), full = q.p.replace('___', q.a);
+  var ok = choice === q.a;
+  document.querySelectorAll('#gOpts .game-opt').forEach(function(b){ if(b.textContent===q.a) b.classList.add('is-correct'); });
+  if(ok){ gScore++; gStreak++; fb.textContent='✓ ¡Correcto! '+full; fb.className='game-feedback ok'; }
+  else { gStreak=0; el.classList.add('is-wrong'); fb.textContent='✗ '+full; fb.className='game-feedback ng'; }
+  document.getElementById('gScore').textContent=gScore; document.getElementById('gStreak').textContent=gStreak;
+  setTimeout(function(){
+    gIdx++;
+    if(gIdx < gameData.length){ showGameQ(); }
+    else { gFinished=true; document.getElementById('gPrompt').innerHTML='<span class="game-done">¡Fin! '+gScore+' / '+gameData.length+'</span>'; document.getElementById('gSub').textContent = gScore===gameData.length?'¡Perfecto! Dominas el capítulo 7.':'Pulsa "Restart Game" para intentarlo de nuevo.'; document.getElementById('gOpts').innerHTML=''; document.getElementById('gNum').textContent=gameData.length+'/'+gameData.length; }
+    updateCompletion();
+  }, 1100);
+}
+
+function updateScore(){ var s=computeScore(); var pct=s.total?Math.round(s.correct/s.total*100):0; var el=document.getElementById('completionScore'); if(el) el.textContent='★ '+pct+'% correcto'; }
+function escapeHtml(str){ return (str==null?'':String(str)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+function stripTags(html){ var dv=document.createElement('div'); dv.innerHTML=html||''; return (dv.textContent||'').replace(/\s+/g,' ').trim(); }
+function reportTable(title, scoreText, groups){
+  var blocks = groups.map(function(g){
+    var rows = g.items.map(function(it){ return '<tr class="'+(it.value?(it.ok?'ok':'bad'):'blank')+'"><td class="num">'+escapeHtml(it.label)+'</td><td>'+(it.value?escapeHtml(it.value):'<span class="blanktxt">(en blanco)</span>')+'</td><td class="note">'+escapeHtml(it.msg||'')+'</td><td class="mark">'+(it.value?(it.ok?'✓':'✗'):'·')+'</td></tr>'; }).join('');
+    return '<h3>'+escapeHtml(g.heading)+'</h3><table><tbody>'+rows+'</tbody></table>';
+  }).join('');
+  return (title?'<h2>'+escapeHtml(title)+'<span class="score">'+escapeHtml(scoreText)+'</span></h2>':'')+blocks;
+}
+function collectBlanks(prefix, n, heading){
+  var items=[], correct=0;
+  for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(!el) continue; var v=(el.value||'').trim(), expected=answersOf(el).join(' / '); var ok=blankOk(el); if(ok) correct++; items.push({ label:String(i), value:v, ok:ok, msg: ok?(blankExact(el)?'Correcto.':'Correcto. Acento: '+answersOf(el)[0]):'Respuesta: '+expected }); }
+  return { heading:heading, items:items, correct:correct, total:items.length };
+}
+function mcItemsFor(key, data){ return data.map(function(item, i){ var ch=quizState[key][i]; return { label:String(i+1), value: ch===null?'':stripTags(item.options[ch]), ok: ch===item.answer, msg: ch===item.answer?'Correcto.':'Correcta: '+stripTags(item.options[item.answer]) }; }); }
+var BLANK_SETS = [["e1_", 8, "Ej 1 · imperfecto -ar"], ["e2_", 8, "Ej 2 · imperfecto -er / -ir"], ["e4_", 6, "Ej 4 · ya no / todavía"], ["r_", 5, "Lectura · D · ya no / todavía"]];
+
+/* ── Flashcards ── */
+var FC = {
+  stages: [
+    {es:'el nacimiento', note:'nacer', en:'birth', ex:'El nacimiento de mi hermano fue en 2010.'},
+    {es:'la infancia', note:'la niñez', en:'childhood', ex:'En mi infancia vivía en Yakima.'},
+    {es:'la adolescencia', note:'13 a 19 años', en:'adolescence', ex:'En la adolescencia jugaba al béisbol.'},
+    {es:'la juventud', note:'ser joven', en:'youth', ex:'En su juventud, mi abuela trabajaba en un huerto.'},
+    {es:'la madurez', note:'la edad adulta', en:'adulthood, maturity', ex:'En la madurez, mi padre cambió de trabajo.'},
+    {es:'la vejez', note:'ser mayor', en:'old age', ex:'Mis bisabuelos vivieron hasta la vejez en México.'},
+    {es:'de niño / de niña', note:'expresión', en:'as a child', ex:'De niña, comía cereal todos los días.'},
+    {es:'cuando era joven', note:'expresión', en:'when I was young', ex:'Cuando era joven, mi abuelo tocaba la guitarra.'}
+  ],
+  events: [
+    {es:'nacer', note:'nací · nació', en:'to be born', ex:'Mi abuela nació en Michoacán.'},
+    {es:'crecer', note:'crecía', en:'to grow up', ex:'Mi papá creció en Wenatchee.'},
+    {es:'graduarse', note:'reflexivo', en:'to graduate', ex:'Mi mamá se graduó en 1998.'},
+    {es:'enamorarse (de)', note:'reflexivo', en:'to fall in love (with)', ex:'Mis abuelos se enamoraron en un baile.'},
+    {es:'casarse (con)', note:'reflexivo', en:'to get married (to)', ex:'Se casaron en 1978.'},
+    {es:'tener hijos', note:'expresión', en:'to have children', ex:'Tuvieron cuatro hijos.'},
+    {es:'mudarse', note:'reflexivo', en:'to move (house)', ex:'Nos mudamos a Olympia en 2015.'},
+    {es:'jubilarse', note:'reflexivo', en:'to retire', ex:'Mi abuelo se jubiló hace diez años.'},
+    {es:'fallecer', note:'formal: morir', en:'to pass away', ex:'Mi bisabuela falleció a los noventa años.'},
+    {es:'cumplir años', note:'expresión', en:'to have a birthday, to turn (an age)', ex:'Mi abuela cumple ochenta años en mayo.'}
+  ],
+  gen: [
+    {es:'la generación', note:'las generaciones', en:'generation', ex:'Mi generación usa mucho la tecnología.'},
+    {es:'la herencia cultural', note:'sustantivo', en:'cultural heritage', ex:'La comida es parte de nuestra herencia cultural.'},
+    {es:'el recuerdo', note:'recordar', en:'memory; souvenir', ex:'Tengo buenos recuerdos de mi infancia.'},
+    {es:'los antepasados', note:'sustantivo', en:'ancestors', ex:'Mis antepasados eran agricultores.'},
+    {es:'los bisabuelos', note:'familia', en:'great-grandparents', ex:'Mis bisabuelos vivían en un rancho.'},
+    {es:'las costumbres', note:'sustantivo', en:'customs, habits', ex:'Las costumbres cambian con el tiempo.'},
+    {es:'los mayores', note:'personas', en:'elders, older people', ex:'Respetamos mucho a los mayores.'},
+    {es:'los jóvenes', note:'personas', en:'young people', ex:'Hoy los jóvenes estudian y trabajan.'}
+  ],
+  work: [
+    {es:'el trabajo', note:'trabajar', en:'work, job', ex:'Mi primer trabajo era en una tienda.'},
+    {es:'el empleo', note:'sustantivo', en:'employment, job', ex:'Buscaba empleo en Yakima.'},
+    {es:'el sueldo', note:'el salario', en:'salary, pay', ex:'El sueldo era bajo.'},
+    {es:'el / la jefe/a', note:'persona', en:'boss', ex:'Su jefa era muy simpática.'},
+    {es:'el / la empleado/a', note:'persona', en:'employee', ex:'La empresa tenía cien empleados.'},
+    {es:'a tiempo completo', note:'expresión', en:'full-time', ex:'Mi mamá trabajaba a tiempo completo.'},
+    {es:'a tiempo parcial', note:'expresión', en:'part-time', ex:'Trabajo a tiempo parcial en un café.'},
+    {es:'la cosecha', note:'sustantivo', en:'harvest', ex:'La cosecha de manzanas es en otoño.'},
+    {es:'el huerto', note:'sustantivo', en:'orchard', ex:'Trabajaban en un huerto de manzanas.'},
+    {es:'el campo', note:'sustantivo', en:'field; countryside', ex:'Mis abuelos trabajaban en el campo.'},
+    {es:'la fábrica', note:'sustantivo', en:'factory', ex:'Mi tío trabajaba en una fábrica.'},
+    {es:'ganarse la vida', note:'expresión', en:'to earn a living', ex:'Se ganaba la vida como mecánico.'}
+  ],
+  time: [
+    {es:'antes', note:'el pasado', en:'before, in the past', ex:'Antes la gente escribía cartas.'},
+    {es:'ahora', note:'el presente', en:'now', ex:'Ahora mandamos mensajes.'},
+    {es:'siempre', note:'hábito', en:'always', ex:'Siempre comíamos juntos.'},
+    {es:'todos los días', note:'hábito', en:'every day', ex:'Todos los días caminaba a la escuela.'},
+    {es:'cada verano', note:'hábito', en:'every summer', ex:'Cada verano visitábamos a mis tíos.'},
+    {es:'a menudo', note:'hábito', en:'often', ex:'A menudo jugábamos en la calle.'},
+    {es:'generalmente', note:'hábito', en:'generally, usually', ex:'Generalmente cenábamos a las seis.'},
+    {es:'mientras', note:'conector', en:'while', ex:'Mientras mi mamá cocinaba, yo leía.'},
+    {es:'ya no', note:'+ presente', en:'no longer, not anymore', ex:'Ya no vivo en Yakima.'},
+    {es:'todavía', note:'+ presente', en:'still', ex:'Mi abuelo todavía trabaja.'}
+  ]
+};
+
+/* ── Ejercicio 3 · los 4 usos ── */
+var USES = ['Hábito','Estado o descripción','Escenario (background)','Edad u hora'];
+var usesData = [
+  ['Todos los veranos visitábamos a mis tíos en Yakima.',0],['Mi abuela tenía el pelo largo y negro.',1],
+  ['Hacía frío y nevaba cuando mis abuelos llegaron.',2],['Tenía diez años cuando aprendí a nadar.',3],
+  ['De niño, siempre comía cereal en el desayuno.',0],['Mi abuelo estaba muy cansado después del trabajo.',1],
+  ['Eran las siete de la mañana.',3],['Los pájaros cantaban y el sol brillaba en el huerto.',2]
+].map(function(x){ return { q:x[0], gloss:'¿qué uso?', options:USES, answer:x[1], explain:[
+  'A repeated action: clue words like <em>todos los veranos, siempre, de niño</em>.',
+  'How a person or thing was, or how someone felt.',
+  'The scene or background of a story, often weather and what was going on.',
+  'Age (<em>tenía … años</em>) or clock time (<em>era la una, eran las siete</em>).'][x[1]] }; });
+usesData.instant = true;
+
+/* ── Ejercicio 5 · builder ── */
+var BUILD = [
+  {en:'As a child, I lived in a small town.', s:'De niña, yo vivía en un pueblo pequeño.'},
+  {en:'My grandparents worked in the field every day.', s:'Mis abuelos trabajaban en el campo todos los días.'},
+  {en:'We no longer write letters by hand.', s:'Ya no escribimos cartas a mano.'},
+  {en:'My grandfather still grows apples in Wenatchee.', s:'Mi abuelo todavía cultiva manzanas en Wenatchee.'}
+];
+var bState = [];
+function shuffle(a){ a=a.slice(); for(var k=a.length-1;k>0;k--){ var r=Math.floor(Math.random()*(k+1)); var t=a[k]; a[k]=a[r]; a[r]=t; } return a; }
+function buildBuilders(){
+  bState = BUILD.map(function(b){ var w=b.s.split(' '), idx=w.map(function(_, i){ return i; }), order=shuffle(idx); if(order.join()===idx.join()) order.reverse(); return { words:w, pool:order, line:[], checked:null }; });
+  renderBuilders();
+}
+function renderBuilders(){
+  document.getElementById('builderCont').innerHTML = bState.map(function(st, i){
+    return '<div class="builder'+(st.checked===true?' ok':st.checked===false?' ng':'')+'" id="bd'+i+'"><div class="bq"><b>'+(i+1)+'.</b> '+BUILD[i].en+'</div>'+
+      '<div class="bline" aria-label="Your sentence">'+st.line.map(function(w, j){ return '<button type="button" class="btile" onclick="unpick('+i+','+j+')">'+st.words[w]+'</button>'; }).join('')+'</div>'+
+      '<div class="bpool">'+st.pool.map(function(w, j){ return '<button type="button" class="btile" onclick="pick('+i+','+j+')">'+st.words[w]+'</button>'; }).join('')+'</div>'+
+      '<div class="bfb'+(st.checked===true?' ok':st.checked===false?' ng':'')+'">'+(st.checked===true?'✓ ¡Correcto!':st.checked===false?'✗ Not yet. Check the order and where ya no / todavía go.':'')+'</div></div>';
+  }).join('');
+}
+function pick(i, j){ var st=bState[i]; st.line.push(st.pool.splice(j,1)[0]); st.checked=null; renderBuilders(); updateCompletion(); }
+function unpick(i, j){ var st=bState[i]; st.pool.push(st.line.splice(j,1)[0]); st.checked=null; renderBuilders(); updateCompletion(); }
+function builderText(i){ var st=bState[i]; return st.line.map(function(w){ return st.words[w]; }).join(' '); }
+function builderOk(i){ return builderText(i)===BUILD[i].s; }
+function checkBuilders(){ var c=0; bState.forEach(function(st, i){ st.checked=builderOk(i); if(st.checked) c++; }); renderBuilders(); setMsg('rs5', c===bState.length, c+' / '+bState.length+' correctas.'+(c===bState.length?' ¡Perfecto! ✓':'')); updateCompletion(); }
+function resetBuilders(){ buildBuilders(); document.getElementById('rs5').className='res-msg'; document.getElementById('rs5').textContent=''; updateCompletion(); }
+
+/* ── Ejercicio 6 · errores comunes ── */
+var placeData = [
+  { q:'"We used to talk every day."', gloss:'-ar · nosotros', options:['Hablabamos todos los días.','Hablábamos todos los días.','Hablámos todos los días.','Hablamos todos los días ayer.'], answer:1, explain:'-ar nosotros: <strong>-ábamos</strong>, with the accent on the first a.' },
+  { q:'"My grandmother used to eat with us."', gloss:'-er · ella', options:['Mi abuela comia con nosotros.','Mi abuela comió con nosotros siempre.','Mi abuela comía con nosotros.','Mi abuela comiaba con nosotros.'], answer:2, explain:'-er: <strong>comía</strong>, with the accent on the í.' },
+  { q:'"I was ten years old."', gloss:'la edad', options:['Tenía diez años.','Era diez años.','Estaba diez años.','Tenía diez años de edad viejo.'], answer:0, explain:'Age uses <strong>tener</strong>: <em>tenía diez años</em>.' },
+  { q:'"I no longer work there."', gloss:'ya no + presente', options:['Ya no trabajaba allí.','Todavía no trabajo allí.','No ya trabajo allí.','Ya no trabajo allí.'], answer:3, explain:'<strong>ya no + present</strong>. <em>Todavía no</em> means "not yet."' },
+  { q:'"I still live with my parents."', gloss:'todavía + presente', options:['Todavía vivo con mis padres.','Ya vivo con mis padres.','Todavía vivía con mis padres ahora.','Vivo todavía no con mis padres.'], answer:0, explain:'<strong>todavía + present</strong>: <em>Todavía vivo…</em>' },
+  { q:'"As a child, I played soccer every day."', gloss:'hábito', options:['De niño jugué al fútbol todos los días.','De niño juego al fútbol todos los días.','De niño jugaba al fútbol todos los días.','De niño juegaba al fútbol todos los días.'], answer:2, explain:'A habit in the past → imperfect, with no stem change: <strong>jugaba</strong>.' }
+];
+placeData.instant = true;
+
+/* ── Ejercicio 7 · short answer ── */
+var NOT_IMPF = ('dia dias tia tias mia mias tuya todavia policia alegria energia compania cafeteria panaderia geografia biologia sofia maria lucia garantia via guia economia tecnologia fotografia filosofia sociologia psicologia ortografia').split(' ');
+function impfTokens(raw){
+  var set={}; (raw||'').toLowerCase().replace(/[¿?¡!.,;:"()«»]/g,' ').split(/\s+/).filter(Boolean).forEach(function(t){
+    var p=t.normalize('NFD').replace(/[̀-ͯ]/g,'');
+    if(/^(era|eras|eramos|eran|iba|ibas|ibamos|iban|veia|veian)$/.test(p)){ set[t]=true; return; }
+    if(/[a-zñ]{2,}(aba|abas|abamos|aban)$/.test(p)){ set[t]=true; return; }
+    if(/[a-zñ]{1,}(ía|ías|íamos|ían)$/.test(t) && NOT_IMPF.indexOf(p)===-1) set[t]=true;
+  });
+  return Object.keys(set);
+}
+var shortData = [
+  { q:'¿Dónde vivías de niño o de niña?', gloss:'Where did you live as a child?', minW:3, test:function(n){ return /\b(vivia|viviamos)\b/.test(n); }, hint:'Usa «Vivía en…».' },
+  { q:'¿Qué hacías los veranos cuando eras pequeño/a?', gloss:'What did you do in the summers?', minW:4, test:function(n, raw){ return impfTokens(raw).length>=1; }, hint:'Usa el imperfecto: «Nadaba…», «Visitaba…», «Jugaba…». Write the accents (comía).' },
+  { q:'¿Cómo era tu escuela primaria?', gloss:'What was your elementary school like?', minW:4, test:function(n){ return /\b(era|tenia|habia)\b/.test(n); }, hint:'Usa «Era…» o «Tenía…».' },
+  { q:'¿Cuántos años tenías cuando aprendiste a nadar o a manejar?', gloss:'How old were you…?', minW:4, test:function(n){ return /\btenia\b.*\banos\b/.test(n); }, hint:'Usa «Tenía … años».' },
+  { q:'¿Qué hacías antes que ya no haces?', gloss:'What did you use to do that you no longer do?', minW:5, test:function(n){ return /\bya no\b/.test(n); }, hint:'Usa «Ya no + presente».' },
+  { q:'¿Qué haces todavía, igual que cuando eras niño/a?', gloss:'What do you still do?', minW:4, test:function(n){ return /\btodavia\b/.test(n); }, hint:'Usa «Todavía + presente».' }
+];
+function buildShort(){
+  document.getElementById('shortCont').innerHTML = shortData.map(function(s, i){
+    return '<div style="margin-bottom:14px;"><label for="sa'+i+'" style="display:block;font-size:0.92rem;font-weight:700;color:var(--navy);">'+(i+1)+'. '+s.q+' <span style="font-weight:400;color:var(--text-hint);font-style:italic;font-size:0.82rem;">'+s.gloss+'</span></label><input class="task-input" id="sa'+i+'" placeholder="Escribe tu respuesta…" autocomplete="off"><div class="task-fb" id="fbsa'+i+'"></div></div>';
+  }).join('');
+}
+function gradeShort(i){
+  var s=shortData[i], v=val('sa'+i), w=wordsOf(v), n=w.join(' ');
+  if(!v) return { ok:false, msg:'Escribe tu respuesta.' };
+  if(w.length<s.minW) return { ok:false, msg:'Escribe una oración completa (mínimo '+s.minW+' palabras).' };
+  if(/\b[a-z]+abamos\b/.test(v.toLowerCase())) return { ok:false, msg:'Revisa el acento: -ábamos.' };
+  if(!s.test(n, v)) return { ok:false, msg:s.hint };
+  return { ok:true, msg:'¡Bien! Respuesta completa.' };
+}
+function checkShort(){ var c=0; shortData.forEach(function(_, i){ var r=gradeShort(i); document.getElementById('sa'+i).style.borderBottomColor=r.ok?'var(--sage)':'var(--terracotta)'; showFb('fbsa'+i, r.ok, r.msg); if(r.ok) c++; }); setMsg('rs7', c===shortData.length, c+' / '+shortData.length+' respuestas válidas.'); updateCompletion(); }
+function resetShort(){ shortData.forEach(function(_, i){ var el=document.getElementById('sa'+i); el.value=''; el.style.borderBottomColor=''; clearFb('fbsa'+i); }); document.getElementById('rs7').className='res-msg'; document.getElementById('rs7').textContent=''; updateCompletion(); }
+
+/* ── Lectura ── */
+var CF=['Cierto','Falso'];
+var readData = [
+  { q:'¿De dónde llegaron los abuelos de Marisol?', gloss:'párrafo 2', options:['De Wenatchee.','De Michoacán, México.','Del valle de Yakima.','De Oaxaca, México.'], answer:1, explain:'«Mis abuelos llegaron de <strong>Michoacán, México</strong>, en 1975».' },
+  { q:'¿A qué hora se levantaban los abuelos para trabajar?', gloss:'párrafo 2', options:['A las cinco de la mañana.','A las siete de la mañana.','A las diez de la mañana.','A mediodía.'], answer:0, explain:'«Se levantaban <strong>a las cinco de la mañana</strong>».' },
+  { q:'¿Qué hacían los trabajadores para pasar el tiempo?', gloss:'párrafo 2', options:['Escuchaban la radio.','Contaban historias.','Cantaban rancheras.','Comían manzanas.'], answer:2, explain:'«Los trabajadores <strong>cantaban rancheras</strong> para pasar el tiempo».' },
+  { q:'De niño, el papá de Marisol trabajaba en el huerto todos los días.', gloss:'cierto o falso · párrafo 3', options:CF, answer:1, explain:'Falso: ayudaba a sus abuelos <strong>los fines de semana</strong> y estudiaba por las noches.' },
+  { q:'¿Qué es el papá de Marisol hoy?', gloss:'párrafo 3', options:['Agricultor.','Profesor.','Mecánico.','Ingeniero agrícola.'], answer:3, explain:'«Ahora es <strong>ingeniero agrícola</strong>: usa computadoras y drones».' },
+  { q:'Para Marisol, las manzanas de sus abuelos son parte de su herencia cultural.', gloss:'cierto o falso · párrafo 4', options:CF, answer:0, explain:'Cierto: «esas manzanas son <strong>nuestra herencia cultural</strong>».' }
+];
+readData.instant = true;
+var HUNT_TEXT = 'Mis abuelos llegaron de Michoacán, México, en 1975. Cuando eran jóvenes, trabajaban en la cosecha de manzanas. Se levantaban a las cinco de la mañana y trabajaban diez horas en el huerto. Mi abuela cuenta que en otoño hacía frío por la mañana y que los trabajadores cantaban rancheras para pasar el tiempo. Vivían en una casa pequeña cerca del huerto y no tenían coche.';
+var HUNT_TARGETS = ['eran','trabajaban','levantaban','hacia','cantaban','vivian','tenian'], HUNT_TOTAL = 8;
+var huntTokens=[], huntSel={}, huntChecked=false, huntScore=0;
+function buildHunt(){
+  huntTokens = HUNT_TEXT.split(/(\s+)/);
+  document.getElementById('huntText').innerHTML = huntTokens.map(function(t, i){
+    if(/^\s+$/.test(t)) return t;
+    var m=t.match(/^([¿¡«]*)(.*?)([.,:;!?»]*)$/);
+    return m[1]+'<span class="w" role="button" tabindex="0" data-i="'+i+'" onclick="toggleHunt('+i+')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();toggleHunt('+i+');}">'+m[2]+'</span>'+m[3];
+  }).join('');
+  huntSel={}; huntChecked=false; paintHunt();
+}
+function huntWord(i){ return normalize(huntTokens[i].replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ]/g,'')); }
+function isTarget(i){ return HUNT_TARGETS.indexOf(huntWord(i))!==-1; }
+function toggleHunt(i){ if(huntSel[i]) delete huntSel[i]; else huntSel[i]=true; huntChecked=false; paintHunt(); updateCompletion(); }
+function paintHunt(){
+  document.querySelectorAll('#huntText .w').forEach(function(el){ var i=+el.dataset.i, sel=!!huntSel[i], tgt=isTarget(i);
+    el.className='w'+(huntChecked?(sel&&tgt?' hit':(sel?' miss':(tgt?' lost':''))):(sel?' sel':'')); });
+  document.getElementById('huntCount').textContent=Object.keys(huntSel).length+' seleccionadas';
+}
+function checkHunt(){
+  huntChecked=true; paintHunt();
+  var keys=Object.keys(huntSel), found=keys.filter(function(i){ return isTarget(+i); }).length, wrong=keys.length-found;
+  huntScore=Math.max(0, found-wrong);
+  setMsg('rsHunt', found===HUNT_TOTAL && !wrong, found+' / '+HUNT_TOTAL+' found'+(wrong?' · '+wrong+' not in the imperfect (red)':'')+(found<HUNT_TOTAL?' · the dashed ones were missed':'')+(found===HUNT_TOTAL&&!wrong?' · ¡Perfecto! ✓':'.'));
+  updateCompletion();
+}
+function resetHunt(){ huntSel={}; huntChecked=false; huntScore=0; paintHunt(); document.getElementById('rsHunt').className='res-msg'; document.getElementById('rsHunt').textContent=''; updateCompletion(); }
+var WHEN=['Antes','Ahora'];
+var whenData = [
+  ['Los abuelos trabajan en la cosecha.',0],['Los abuelos viven en Wenatchee.',1],['El papá usa drones para cuidar los árboles.',1],['Los abuelos no tienen coche.',0],
+  ['Los trabajadores cantan rancheras en el huerto.',0],['La familia hace empanadas de manzana cada otoño.',1],['El papá ayuda a los abuelos los fines de semana.',0],['Los abuelos no trabajan en el campo.',1]
+].map(function(x){ return { q:x[0], gloss:'¿antes o ahora?', options:WHEN, answer:x[1], explain: x[1]===0?'In the reading this is in the <strong>imperfect</strong>: it is how life used to be.':'In the reading this is in the <strong>present</strong> (often with <em>ya no</em> or <em>todavía</em>): it is true today.' }; });
+whenData.instant = true;
+
+/* ── Juegos ── */
+var quizData = [
+  { q:'De niña, yo <u>___</u> en el coro de la iglesia. <em>(cantar)</em>', gloss:'imperfecto -ar', options:['canté','cantaba','canto','cantía'], answer:1, explain:'A past habit → <strong>cantaba</strong>.' },
+  { q:'Nosotros <u>___</u> en un apartamento pequeño. <em>(vivir)</em>', gloss:'imperfecto -ir', options:['vivíamos','vivábamos','vivimos ayer','vivían'], answer:0, explain:'-ir, nosotros → <strong>vivíamos</strong>.' },
+  { q:'<u>___</u> las ocho de la noche.', gloss:'la hora', options:['Era','Fueron','Eran','Estaban'], answer:2, explain:'Clock time in the past: <strong>Eran</strong> las ocho (era la una).' },
+  { q:'"My grandparents no longer work."', gloss:'ya no', options:['Mis abuelos todavía trabajan.','Mis abuelos ya no trabajaban.','Mis abuelos no ya trabajan.','Mis abuelos ya no trabajan.'], answer:3, explain:'<strong>ya no + present</strong>.' },
+  { q:'<em>Hacía frío y llovía cuando salimos.</em> Why the imperfect?', gloss:'usos', options:['It is the background of the story.','It is someone\'s age.','It is a single finished action.','It is a future plan.'], answer:0, explain:'Weather and what was going on: the <strong>background</strong>.' },
+  { q:'<em>Jubilarse</em> means…', gloss:'vocabulario', options:['to graduate','to get married','to retire','to move'], answer:2, explain:'<strong>Jubilarse</strong> = to retire.' },
+  { q:'The stage of life between childhood and adulthood is…', gloss:'vocabulario', options:['la vejez','la adolescencia','la madurez','el nacimiento'], answer:1, explain:'<strong>La adolescencia</strong>.' },
+  { q:'Mi abuela tiene 85 años y <u>___</u> maneja su coche.', gloss:'todavía', options:['todavía','ya no','antes','nunca más'], answer:0, explain:'It continues today → <strong>todavía</strong>.' },
+  { q:'Mis tíos <u>___</u> en una fábrica a tiempo completo. <em>(trabajar)</em>', gloss:'imperfecto -ar', options:['trabajaba','trabajábamos','trabajaban','trabajían'], answer:2, explain:'ellos → <strong>trabajaban</strong>.' },
+  { q:'<em>La cosecha</em> is…', gloss:'el trabajo', options:['the factory','the boss','the salary','the harvest'], answer:3, explain:'<strong>La cosecha</strong> = the harvest.' }
+];
+function checkQuiz(){ var c=0; quizData.forEach(function(_, i){ if(revealMC('quiz', i)) c++; }); setMsg('rsQuiz', c===quizData.length, c+' / '+quizData.length+' correctas.'+(c===quizData.length?' ¡Perfecto! ✓':' Lee cada explicación.')); updateCompletion(); }
+function resetQuiz(){ resetMC('quiz'); document.getElementById('rsQuiz').className='res-msg'; document.getElementById('rsQuiz').textContent=''; updateCompletion(); }
+var MATCH = {
+  w: { cont:'matchCont', msg:'rsMatch', labels:['Español','English'], done:'¡Excelente! Emparejaste las ', noun:' palabras. ✓', matched:0, finished:false, selA:null, selB:null, data:[
+    {a:'la infancia', b:'childhood'}, {a:'la vejez', b:'old age'}, {a:'nacer', b:'to be born'}, {a:'crecer', b:'to grow up'}, {a:'casarse', b:'to get married'},
+    {a:'jubilarse', b:'to retire'}, {a:'el sueldo', b:'salary'}, {a:'el huerto', b:'orchard'}, {a:'la herencia cultural', b:'cultural heritage'}, {a:'los antepasados', b:'ancestors'}
+  ]},
+  m: { cont:'matchCont2', msg:'rsMatch2', labels:['Infinitivo','Yo · imperfecto'], done:'¡Excelente! Emparejaste los ', noun:' verbos. ✓', matched:0, finished:false, selA:null, selB:null, data:[
+    {a:'hablar', b:'hablaba'}, {a:'comer', b:'comía'}, {a:'vivir', b:'vivía'}, {a:'tener', b:'tenía'}, {a:'jugar', b:'jugaba'}, {a:'hacer', b:'hacía'}, {a:'ser', b:'era'}, {a:'ir', b:'iba'}
+  ]}
+};
+var gameData = [
+  {p:'De niño, yo ___ en el parque.', a:'jugaba', o:['jugaba','juegaba','jugué'], h:'jugar · hábito'},
+  {p:'Nosotros ___ en Yakima.', a:'vivíamos', o:['vivíamos','vivábamos','vivímos'], h:'vivir · nosotros'},
+  {p:'Mis abuelos ___ en el campo.', a:'trabajaban', o:['trabajaban','trabajaba','trabajían'], h:'trabajar · ellos'},
+  {p:'Cuando ___ diez años, aprendí a nadar.', a:'tenía', o:['tenía','tuve','tengo'], h:'la edad'},
+  {p:'___ frío y llovía.', a:'Hacía', o:['Hacía','Hizo','Era'], h:'el escenario'},
+  {p:'___ las siete de la mañana.', a:'Eran', o:['Eran','Era','Estaban'], h:'la hora'},
+  {p:'Nosotros ___ todos los domingos.', a:'cenábamos', o:['cenábamos','cenabamos','cenamos ayer'], h:'cenar · nosotros'},
+  {p:'Antes vivía aquí, pero ___ vivo aquí.', a:'ya no', o:['ya no','todavía','antes'], h:'no longer'},
+  {p:'Mi abuela ___ cocina todos los días.', a:'todavía', o:['todavía','ya no','nunca'], h:'still'},
+  {p:'Mi abuelo se ___ hace diez años.', a:'jubiló', o:['jubiló','casó','nació'], h:'to retire'},
+  {p:'Mis padres ___ en una fábrica.', a:'trabajaban', o:['trabajaban','trabajabamos','trabajía'], h:'trabajar · ellos'},
+  {p:'En su ___, mi abuela vivía en México.', a:'juventud', o:['juventud','vejez','nacimiento'], h:'when she was young'}
+];
+
+/* ── Tarea · Entrevista ── */
+var WORK_WORDS=['trabajo','trabajaba','trabajar','empleo','sueldo','salario','jefe','jefa','empleado','empleada','empleados','companeros','companero','companera','tiempo completo','tiempo parcial','cosecha','huerto','campo','fabrica','oficina','tienda','restaurante','empresa','turno','horas','ganaba','clientes','maquinas'];
+var HABIT_WORDS=['siempre','todos los dias','cada','generalmente','a menudo','normalmente','todas las mananas','los lunes','por la manana','por la tarde'];
+function taskAnalysis(){
+  var who=val('recTitle'), notes=val('recIng'), raw=val('taskText'), n=' '+normalize(raw).replace(/[¿?¡!.,;:"()«»]/g,' ').replace(/\s+/g,' ')+' ', w=wordsOf(raw);
+  var sentences=raw.split(/[.!?\n]+/).filter(function(s){ return s.trim().split(/\s+/).filter(Boolean).length>=3; }).length;
+  var impf=impfTokens(raw);
+  var habit=HABIT_WORDS.some(function(x){ return n.indexOf(' '+x+' ')!==-1; });
+  var age=/ tenia [a-z0-9 ]{1,25} anos /.test(n) || / (era la|eran las) /.test(n);
+  var work={}; WORK_WORDS.forEach(function(x){ if(n.indexOf(' '+x+' ')!==-1) work[x]=true; });
+  var yanotod=/ ya no | todavia /.test(n);
+  var today=/ (hoy|ahora|en la actualidad|hoy en dia) /.test(n);
+  var errs=[];
+  if(/[a-zñ]abamos\b/.test(raw.toLowerCase())) errs.push('-ábamos (accent)');
+  if(/\b(comia|vivia|tenia|queria|podia|salia|escribia|leia|sabia|bebia|aprendia|corria|vivian|tenian|comian)\b/.test(raw.toLowerCase())) errs.push('-ía needs an accent (comía, tenía)');
+  if(/ ya no (trabajaba|vivia|jugaba|estudiaba|tenia) /.test(n)) errs.push('ya no + presente (ya no trabaja)');
+  if(/ (juegaba|duermia|pidia|quieria|puedia) /.test(n)) errs.push('no stem changes in the imperfect (jugaba, dormía)');
+  return { who:who, notes:notes, raw:raw, words:w.length, sentences:sentences, impf:impf, habit:habit, age:age, work:Object.keys(work), yanotod:yanotod, today:today, errs:errs };
+}
+function taskCriteria(){
+  var a=taskAnalysis();
+  return [
+    { label:'<b>¿A quién entrevistaste?</b>', met:a.who.length>1, txt:'persona entrevistada' },
+    { label:'<b>8+ oraciones</b> ('+a.sentences+')', met:a.sentences>=8, txt:'8+ oraciones' },
+    { label:'<b>6+ verbos en imperfecto</b> ('+(a.impf.slice(0,5).join(', ')||'trabajaba, tenía…')+(a.impf.length>5?'…':'')+')', met:a.impf.length>=6, txt:'6+ imperfecto' },
+    { label:'<b>Un hábito</b> (siempre, todos los días, cada…)', met:a.habit, txt:'hábito' },
+    { label:'<b>Edad u hora</b> (tenía … años, eran las…)', met:a.age, txt:'edad u hora' },
+    { label:'<b>3+ palabras del trabajo</b> ('+(a.work.slice(0,4).join(', ')||'sueldo, jefe…')+')', met:a.work.length>=3, txt:'vocabulario del trabajo' },
+    { label:'<b>ya no</b> o <b>todavía</b> + presente', met:a.yanotod, txt:'ya no / todavía' },
+    { label:'<b>Una comparación con hoy</b> (hoy, ahora…)', met:a.today, txt:'comparación con hoy' },
+    { label:'<b>Sin errores comunes</b> (acentos: tenía, -ábamos)', met:a.words>0 && a.errs.length===0, txt:'sin errores comunes' }
+  ];
+}
+var taskChecked=false;
+function renderTask(){ var a=taskAnalysis(), crit=taskCriteria(); document.getElementById('taskWc').textContent=a.sentences+' oraciones · '+a.words+' palabras'; document.getElementById('taskChecklist').innerHTML=crit.map(function(c){ return '<li class="'+(c.met?'met':'')+'">'+c.label+'</li>'; }).join(''); }
+function checkTask(){
+  var a=taskAnalysis(), crit=taskCriteria(), met=crit.filter(function(c){return c.met;}).length; taskChecked=true; renderTask();
+  if(!a.raw){ setMsg('rsTask', false, 'Escribe tu informe primero.'); updateCompletion(); return; }
+  setMsg('rsTask', met===crit.length, met+' / '+crit.length+' criterios cumplidos.'+(a.errs.length?' Revisa: '+a.errs.join('; ')+'.':'')+(met===crit.length?' ¡Excelente! Tu informe está listo para entregar. ✓':'')); updateCompletion();
+}
+function resetTask(){ ['recTitle','recIng','taskText'].forEach(function(id){ document.getElementById(id).value=''; }); taskChecked=false; renderTask(); document.getElementById('rsTask').className='res-msg'; document.getElementById('rsTask').textContent=''; updateCompletion(); }
+
+/* ── Video Log 3 ── */
+var FAMILY = /\b(abuel[oa]s?|padres|papa|mama|madre|padre|bisabuel[oa]s?|tio|tia|mis mayores)\b/;
+var VL_PARTS = [
+  { t:'Opening · who you are comparing', es:'Presentación', d:'Greet your viewer, introduce yourself and the person (or generation) you will compare with yours: a parent, a grandparent, an older relative.',
+    tags:['presente','la familia'], starters:['¡Hola! Me llamo … y hoy les voy a hablar de mi generación y de la generación de mi …','Mi abuela se llama … y tiene … años.','Mis padres nacieron en …'],
+    check:function(n){ var f=FAMILY.test(n); return { ok:f, msg:f?'✓ family member':'✗ name a parent or grandparent' }; } },
+  { t:'Their youth · the imperfect', es:'Su juventud', d:'Describe what life was like for that person when they were your age: where they lived, what they did every day, what they liked. Include their age.',
+    tags:['imperfecto','tenía … años','hábitos'], starters:['Cuando mi abuela tenía … años, vivía en …','Todos los días se levantaba a las … y trabajaba en …','Los fines de semana, mis padres …','No tenían celulares, así que …'],
+    check:function(n, raw){ var k=impfTokens(raw).length, a=/\btenia\b/.test(n)||/\b(tenian)\b/.test(n); return { ok:k>=3&&a, msg:(k>=3?'✓ ':'✗ ')+k+' / 3 imperfect verbs · '+(a?'✓ age (tenía)':'✗ add tenía … años') }; } },
+  { t:'Your generation · the present', es:'Mi generación', d:'Describe your life now: technology, school, work, free time, how you communicate. Compare with más… que or menos… que.',
+    tags:['presente','más / menos… que'], starters:['Hoy mi generación …','Nosotros usamos … para todo.','Los jóvenes de hoy trabajan y estudian al mismo tiempo.','Creo que mi vida es más … que la vida de mis abuelos.'],
+    check:function(n){ var c=/\b(mas|menos)\b.*\bque\b|\btan\b.*\bcomo\b/.test(n), p=/\b(hoy|ahora|mi generacion|los jovenes|nosotros)\b/.test(n); return { ok:c&&p, msg:(p?'✓ talks about today':'✗ add hoy / mi generación…')+' · '+(c?'✓ comparison':'✗ add más… que / menos… que') }; } },
+  { t:'What changed · ya no', es:'Lo que cambió', d:'Say at least two things people no longer do, with ya no + present.',
+    tags:['ya no + presente'], starters:['Ya no escribimos cartas: ahora …','Antes la gente …, pero ya no …','Mis abuelos ya no …'],
+    check:function(n){ var k=(n.match(/\bya no\b/g)||[]).length; return { ok:k>=2, msg:(k>=2?'✓ ':'✗ ')+k+' / 2 ya no' }; } },
+  { t:'What stays the same · todavía', es:'Lo que sigue igual', d:'Say at least one thing that is still the same today, with todavía + present.',
+    tags:['todavía + presente'], starters:['Todavía comemos juntos los domingos.','Mi familia todavía celebra …','Mis abuelos todavía …'],
+    check:function(n){ var t=/\btodavia\b/.test(n); return { ok:t, msg:t?'✓ todavía':'✗ add todavía + present' }; } },
+  { t:'Closing · your opinion', es:'Conclusión', d:'Which generation had an easier or a better life? Give your opinion with a reason, and say goodbye.',
+    tags:['porque · como','por eso · así que'], starters:['Creo que mi generación tiene una vida más … porque …','Como mis abuelos trabajaban mucho, …','Por eso, admiro mucho a …','¡Gracias por ver mi video!'],
+    check:function(n, raw){ var c=vlConn(n, raw).length; return { ok:c>=1, msg:c>=1?'✓ connector: '+vlConn(n, raw).join(', '):'✗ add porque / como / por eso / así que' }; } }
+];
+function vlConn(n, raw){ var out=[]; if(/\bporque\b/.test(n)) out.push('porque'); if(/(^|[.!?;¡¿]\s*)como\b/i.test((raw||'').trim())) out.push('como'); if(/\bpor eso\b/.test(n)) out.push('por eso'); if(/\basi que\b/.test(n)) out.push('así que'); return out; }
+function vlAnalysis(){
+  var raw=vlAll(), n=normalize(raw), w=wordsOf(raw);
+  var conn=[]; VL_PARTS.forEach(function(_, i){ vlConn(normalize(vlText(i)), vlText(i)).forEach(function(c){ if(conn.indexOf(c)===-1) conn.push(c); }); });
+  var errs=[];
+  if(/[a-zñ]abamos\b/.test(raw.toLowerCase())) errs.push('-ábamos needs an accent');
+  if(/\b(juegaba|duermia|pidia|quieria|puedia)\b/i.test(raw)) errs.push('no stem changes in the imperfect (jugaba, dormía)');
+  if(/\bya no (trabajaba|vivia|vivía|jugaba|escribia|escribía|tenia|tenía)\b/i.test(raw)) errs.push('ya no + presente');
+  return { raw:raw, words:w.length, mins:w.length/100, impf:impfTokens(raw), reg:impfTokens(raw), age:/\btenia\b.*\banos\b/.test(n), habit:HABIT_WORDS.some(function(x){ return (' '+n+' ').indexOf(' '+x+' ')!==-1; }) || /\b(de nino|de nina|cuando era)\b/.test(n), yano:/\bya no\b/.test(n), tod:/\btodavia\b/.test(n), comp:/\b(mas|menos)\b.*\bque\b|\btan\b.*\bcomo\b/.test(n), conn:conn, errs:errs };
+}
+function vlCriteria(){
+  var a=vlAnalysis();
+  return [
+    { txt:'2 to 3 minutes', label:'<b>2 a 3 minutos</b> (≈ 200 to 300 words · '+a.words+')', met:a.words>=200 && a.words<=330 },
+    { txt:'5+ imperfect verbs', label:'<b>Imperfecto</b> · 5+ ('+(a.impf.slice(0,5).join(', ')||'vivía, trabajaba…')+')', met:a.impf.length>=5 },
+    { txt:'age in the past', label:'<b>Edad en el pasado</b> · tenía … años', met:a.age },
+    { txt:'habitual expression', label:'<b>Hábito</b> · siempre, todos los días, cuando era…', met:a.habit },
+    { txt:'ya no + present', label:'<b>ya no</b> + presente', met:a.yano },
+    { txt:'todavía + present', label:'<b>todavía</b> + presente', met:a.tod },
+    { txt:'comparison', label:'<b>Comparación</b> · más / menos… que', met:a.comp },
+    { txt:'speak directly to camera', label:'<b>Hablo directamente a la cámara</b> <span style="font-weight:400">(click to confirm after you practice)</span>', met:vlCamera, manual:true }
+  ];
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PRONUNCIATION GAME · CONFIGURATION
+   Edit this list for each week. level: 1 = words, 2 = phrases, 3 = sentences.
+   tip (optional) appears under the word.
+   ═══════════════════════════════════════════════════════════════ */
+var PR_WORDS = [
+  { es:'la infancia', en:'childhood', level:1, tip:'Four syllables: in-FAN-cia. The c before i sounds like s.' },
+  { es:'la adolescencia', en:'adolescence', level:1, tip:'a-do-les-CEN-cia: sc sounds like a single s in Latin America.' },
+  { es:'la madurez', en:'adulthood, maturity', level:1, tip:'Stress the last syllable: ma-du-REZ. The z sounds like s.' },
+  { es:'la generación', en:'generation', level:1, tip:'g before e sounds like a strong h: «heneración». Stress -CIÓN.' },
+  { es:'la herencia cultural', en:'cultural heritage', level:1, tip:'The h is silent: «erencia». The r in «herencia» is a quick tap.' },
+  { es:'crecer', en:'to grow up', level:1, tip:'cr is a quick tap; both c before e sound like s: «creser».' },
+  { es:'jubilarse', en:'to retire', level:1, tip:'j is a strong h sound; the b is soft, lips barely touching.' },
+  { es:'fallecer', en:'to pass away', level:1, tip:'ll sounds like y: «fayeser».' },
+  { es:'cuando era niño', en:'when I was a child', level:2, tip:'Link the words: «cuandoeraniño». ñ sounds like ny.' },
+  { es:'trabajaban en el campo', en:'they used to work in the field', level:2, tip:'Stress -BA-: tra-ba-JA-ban. Link «en el»: «enel».' },
+  { es:'ya no vivo aquí', en:'I don\'t live here anymore', level:2, tip:'v and b sound the same: «bibo». Stress the í in aquí.' },
+  { es:'todavía cocina', en:'she still cooks', level:2, tip:'to-da-VÍ-a: four syllables, the stress is on the í.' },
+  { es:'De niña, vivía con mis abuelos.', en:'As a girl, I lived with my grandparents.', level:3 },
+  { es:'Mis abuelos trabajaban en la cosecha de manzanas.', en:'My grandparents used to work in the apple harvest.', level:3 }
+];
+var PR_PASS = 80;          // minimum % to unlock the next word
+var PR_LANG = 'es-MX';     // recognition and voice language (es-MX, es-US, es-ES…)
+var PR_KEY  = 'spsccEsp122_sem7_pron_v1';
+
+/* ── Phonetic normalization (Spanish spelling → sounds) ── */
+function prPhon(s){
+  s = (s||'').toLowerCase().replace(/ñ/g,'N').normalize('NFD').replace(/[̀-ͯ]/g,'');
+  s = s.replace(/[^a-zN ]+/g,' ').replace(/\s+/g,' ').trim();
+  s = s.split(' ').map(function(w){
+    w = w.replace(/^r/,'R').replace(/rr/g,'R').replace(/ch/g,'C').replace(/ll/g,'y').replace(/qu/g,'k')
+         .replace(/gu([ei])/g,'g$1').replace(/g([ei])/g,'j$1').replace(/c([ei])/g,'s$1').replace(/c/g,'k')
+         .replace(/z/g,'s').replace(/v/g,'b').replace(/h/g,'').replace(/w/g,'u').replace(/x/g,'ks').replace(/y$/,'i');
+    return w;
+  });
+  return s;
+}
+function prLev(a, b){
+  var m = a.length, n = b.length, d = [], i, j;
+  for(i=0;i<=m;i++){ d[i]=[i]; }
+  for(j=0;j<=n;j++){ d[0][j]=j; }
+  for(i=1;i<=m;i++) for(j=1;j<=n;j++){
+    d[i][j] = Math.min(d[i-1][j]+1, d[i][j-1]+1, d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
+  }
+  return d[m][n];
+}
+var PR_STRICT = 1.5;       // each wrong sound costs 1.5x its share: one wrong sound in a short word does not pass
+function prSim(a, b){ if(!a.length && !b.length) return 1; return Math.max(0, 1 - PR_STRICT*prLev(a, b)/Math.max(a.length, b.length)); }
+/* recognizers often write numbers as digits: turn them back into Spanish words */
+function prNumEs(n){
+  var u=['cero','uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez','once','doce','trece','catorce','quince','dieciséis','diecisiete','dieciocho','diecinueve',
+    'veinte','veintiuno','veintidós','veintitrés','veinticuatro','veinticinco','veintiséis','veintisiete','veintiocho','veintinueve'];
+  var t={3:'treinta',4:'cuarenta',5:'cincuenta',6:'sesenta',7:'setenta',8:'ochenta',9:'noventa'};
+  var h={1:'ciento',2:'doscientos',3:'trescientos',4:'cuatrocientos',5:'quinientos',6:'seiscientos',7:'setecientos',8:'ochocientos',9:'novecientos'};
+  if(n<30) return u[n];
+  if(n<100) return t[Math.floor(n/10)] + (n%10 ? ' y '+u[n%10] : '');
+  if(n===100) return 'cien';
+  if(n<1000) return h[Math.floor(n/100)] + (n%100 ? ' '+prNumEs(n%100) : '');
+  return String(n);
+}
+function prDigits(s){ return (s||'').replace(/\d+/g, function(d){ return ' '+prNumEs(parseInt(d,10))+' '; }); }
+/* score one heard transcript against the target (0 to 100) */
+function prScoreOf(target, heard){
+  var t = prPhon(target), h = prPhon(prDigits(heard));
+  if(!h.length) return 0;
+  var full = prSim(t.join(''), h.join(''));
+  // allow the recognizer to add filler words around a single target word
+  var best = 0;
+  if(t.length===1){ h.forEach(function(w){ best = Math.max(best, prSim(t[0], w)); }); best -= (h.length>1?0.05:0); }
+  return Math.round(Math.max(full, best, 0)*100);
+}
+/* which target words were heard */
+function prWordHits(target, heard){
+  var h = prPhon(prDigits(heard)), tw = (target||'').split(/\s+/);
+  return tw.map(function(w){ var p = prPhon(w).join(''); return { w:w, hit: h.some(function(x){ return prSim(p, x) >= 0.8; }) }; });
+}
+
+/* ── State ── */
+var prIdx = 0, prState = [], prRec = null, prListening = false, prVoice = null;
+function prInit(){
+  prState = PR_WORDS.map(function(){ return { best:0, tries:0, passed:false, heard:'' }; });
+  try{ var st = JSON.parse(localStorage.getItem(PR_KEY)||'null'); if(st && st.n===PR_WORDS.length){ prState = st.s; prIdx = st.i; } }catch(e){}
+  prDots(); prShow();
+}
+function prSave(){ try{ localStorage.setItem(PR_KEY, JSON.stringify({ n:PR_WORDS.length, s:prState, i:prIdx })); }catch(e){} }
+function prPoints(){ return prState.reduce(function(a, s){ return a + (s.passed ? Math.max(10, 100 - (s.tries-1)*15) : 0); }, 0); }
+function prStreak(){ var k=0; for(var i=0;i<prState.length;i++){ if(prState[i].passed && prState[i].tries===1) k++; else if(prState[i].passed) k=0; } return k; }
+function prStars(b){ return b>=97 ? '★★★' : b>=90 ? '★★' : b>=PR_PASS ? '★' : '—'; }
+function prDots(){
+  document.getElementById('prDots').innerHTML = PR_WORDS.map(function(_, i){
+    return '<span class="pr-dot '+(prState[i].passed?'done':(i===prIdx?'cur':''))+'" title="'+(i+1)+'"></span>';
+  }).join('');
+}
+function prShow(){
+  if(prIdx >= PR_WORDS.length){ return prFinish(); }
+  var w = PR_WORDS[prIdx], st = prState[prIdx];
+  document.getElementById('prCard').style.display = '';
+  document.getElementById('prDone').classList.remove('show');
+  document.getElementById('prWord').textContent = w.es;
+  document.getElementById('prEn').textContent = w.en || '';
+  var tip = document.getElementById('prTip');
+  if(w.tip){ tip.style.display='inline-block'; tip.innerHTML = w.tip; } else tip.style.display='none';
+  document.getElementById('prNum').textContent = (prIdx+1)+'/'+PR_WORDS.length;
+  document.getElementById('prLevel').textContent = ['','Nivel 1 · Palabras','Nivel 2 · Frases','Nivel 3 · Oraciones'][w.level||1];
+  document.getElementById('prTries').textContent = st.tries;
+  document.getElementById('prPts').textContent = prPoints();
+  document.getElementById('prStreak').textContent = prStreak();
+  document.getElementById('prNext').disabled = !st.passed;
+  document.getElementById('prResult').classList.remove('show');
+  document.getElementById('prInterim').textContent = st.passed ? '✓ Ya pasaste esta palabra. Puedes practicar otra vez o continuar.' : '';
+  prDots();
+}
+
+/* ── Model audio (browser voice) ── */
+function prPickVoice(){
+  if(!('speechSynthesis' in window)) return;
+  var vs = speechSynthesis.getVoices(), base = PR_LANG.split('-')[0];
+  prVoice = vs.filter(function(v){ return v.lang===PR_LANG; })[0] || vs.filter(function(v){ return (v.lang||'').indexOf(base)===0; })[0] || null;
+}
+if('speechSynthesis' in window){ prPickVoice(); speechSynthesis.onvoiceschanged = prPickVoice; }
+function prSpeak(rate){
+  if(!('speechSynthesis' in window)) return prWarn('Your browser cannot play the model voice. Ask your instructor for the audio.');
+  speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(PR_WORDS[prIdx].es);
+  u.lang = PR_LANG; u.rate = rate || 1; if(prVoice) u.voice = prVoice;
+  speechSynthesis.speak(u);
+}
+
+/* ── Speech recognition ── */
+var PR_SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+function prWarn(html){ var w = document.getElementById('prWarn'); w.innerHTML = html; w.classList.add('show'); }
+function prListen(){
+  if(!PR_SR) return prWarn('This browser cannot recognize speech. Please open this page in <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> or <strong>Safari</strong>.');
+  if(prListening){ try{ prRec.stop(); }catch(e){} return; }
+  if('speechSynthesis' in window) speechSynthesis.cancel();
+  prRec = new PR_SR();
+  prRec.lang = PR_LANG; prRec.interimResults = true; prRec.maxAlternatives = 5; prRec.continuous = false;
+  var finalAlts = [], mic = document.getElementById('prMic'), interim = document.getElementById('prInterim');
+  prRec.onstart = function(){ prListening = true; mic.classList.add('rec'); mic.innerHTML = '● Escuchando… (toca para parar)'; interim.textContent = 'Habla ahora…'; };
+  prRec.onresult = function(e){
+    for(var i=e.resultIndex;i<e.results.length;i++){
+      var r = e.results[i];
+      if(r.isFinal){ for(var k=0;k<r.length;k++) finalAlts.push(r[k].transcript); }
+      else interim.textContent = '» ' + r[0].transcript;
+    }
+  };
+  prRec.onerror = function(e){
+    var msg = { 'not-allowed':'The microphone is blocked. Click the lock icon in the address bar and allow the microphone, then try again.',
+      'service-not-allowed':'The microphone is blocked. Click the lock icon in the address bar and allow the microphone, then try again.',
+      'no-speech':'I did not hear anything. Speak a little louder and closer to the microphone.',
+      'audio-capture':'No microphone was found. Connect a microphone or headset and try again.',
+      'network':'Speech recognition needs an internet connection. Check your connection and try again.' }[e.error];
+    if(msg){ if(e.error==='no-speech') interim.textContent = msg; else prWarn(msg); }
+  };
+  prRec.onend = function(){
+    prListening = false; mic.classList.remove('rec'); mic.innerHTML = '● Habla';
+    if(finalAlts.length) prGrade(finalAlts); else if(/^(Habla|»)/.test(interim.textContent)) interim.textContent = 'I did not catch that. Try again.';
+  };
+  try{ prRec.start(); }catch(e){ prWarn('The microphone could not start. Reload the page and try again.'); }
+}
+function prGrade(alts){
+  var w = PR_WORDS[prIdx], st = prState[prIdx], best = -1, bestAlt = '';
+  alts.forEach(function(a){ var s = prScoreOf(w.es, a); if(s > best){ best = s; bestAlt = a; } });
+  st.tries++; st.heard = bestAlt;
+  var ok = best >= PR_PASS;
+  if(best > st.best) st.best = best;
+  if(ok && !st.passed){ st.passed = true; }
+  prSave();
+  document.getElementById('prInterim').textContent = '';
+  var ring = document.getElementById('prRing');
+  ring.style.setProperty('--p', best); ring.style.setProperty('--ring-c', ok ? '#6E8C5F' : (best>=60 ? '#D4A24C' : '#C45D3A'));
+  document.getElementById('prScore').textContent = best+'%';
+  var v = document.getElementById('prVerdict');
+  v.className = 'pr-verdict '+(ok?'ok':'ng');
+  v.textContent = ok ? (best>=97 ? '¡Perfecto! ★★★' : best>=90 ? '¡Excelente! ★★' : '¡Bien! ★ Next word unlocked.') :
+    (best>=60 ? 'Casi… ¡otra vez! You need 80%.' : 'Escucha el modelo y repite. You need 80%.');
+  document.getElementById('prHeard').innerHTML = 'Escuché: <em>«'+bestAlt.replace(/[<>&]/g,'')+'»</em>';
+  document.getElementById('prBest').textContent = st.best+'%';
+  var words = prWordHits(w.es, bestAlt);
+  document.getElementById('prWords').innerHTML = words.length>1 ? words.map(function(x){ return '<span class="'+(x.hit?'hit':'miss')+'">'+(x.hit?'✓ ':'✗ ')+x.w+'</span>'; }).join('') : '';
+  document.getElementById('prResult').classList.add('show');
+  document.getElementById('prNext').disabled = !st.passed;
+  document.getElementById('prTries').textContent = st.tries;
+  document.getElementById('prPts').textContent = prPoints();
+  document.getElementById('prStreak').textContent = prStreak();
+  if(!ok && st.tries>=3 && !st.passed) document.getElementById('prInterim').textContent = 'Tip: press Despacio, repeat syllable by syllable, then say it at normal speed.';
+  prDots(); if(typeof updateCompletion==='function') updateCompletion();
+}
+function prNextWord(){ if(!prState[prIdx].passed) return; prIdx++; prSave(); prShow(); if(typeof updateCompletion==='function') updateCompletion(); }
+function prFinish(){
+  document.getElementById('prCard').style.display = 'none';
+  var avg = Math.round(prState.reduce(function(a, s){ return a + s.best; }, 0) / prState.length);
+  document.getElementById('prFinal').innerHTML = 'Promedio de pronunciación: <strong>'+avg+'%</strong> · Puntos: <strong>'+prPoints()+'</strong> de '+(PR_WORDS.length*100)+'.';
+  document.getElementById('prTable').innerHTML = PR_WORDS.map(function(w, i){ var s = prState[i];
+    return '<tr><td>'+w.es+'</td><td>'+s.best+'%</td><td>'+s.tries+'</td><td class="pr-stars">'+prStars(s.best)+'</td></tr>'; }).join('');
+  document.getElementById('prDone').classList.add('show');
+  document.getElementById('prNum').textContent = PR_WORDS.length+'/'+PR_WORDS.length;
+  prDots();
+}
+function prRestart(){ if(!confirm('Start over? Your scores will be reset. / ¿Empezar de nuevo?')) return; prIdx = 0; prState = PR_WORDS.map(function(){ return { best:0, tries:0, passed:false, heard:'' }; }); prSave(); prShow(); }
+
+function prEsc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+/* ── Start ── */
+if(!PR_SR) prWarn('This browser cannot recognize speech. Please open this page in <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> or <strong>Safari</strong>.');
+else if(location.protocol==='file:') prWarn('Tip: if the microphone does not start, this page needs to be opened from Canvas or another website (https), not from a downloaded file.');
+
+
+
+/* ── Completion + score ── */
+function idsFilled(prefix, n){ var out=[]; for(var i=1;i<=n;i++) out.push(val(prefix+i).length>0); return out; }
+function mcAnswered(key){ return MC_SETS[key].map(function(_, i){ return quizState[key][i]!==null; }); }
+function blanksCorrect(prefix, n){ var c=0; for(var i=1;i<=n;i++){ var el=document.getElementById(prefix+i); if(el && blankOk(el)) c++; } return c; }
+var completionGroups = [
+  { label:'Nombre', tab:'ov', items:function(){ return [val('studentName').length>0]; } },
+  { label:'Vocabulario', tab:'vo', items:function(){ var a=[]; for(var i=0;i<flashTotal();i++) a.push(i<flashDone()); return a; } },
+  { label:'Ejercicios', tab:'ej', items:function(){ var a=[]; BLANK_SETS.slice(0,3).forEach(function(b){ a=a.concat(idsFilled(b[0],b[1])); }); return a.concat(mcAnswered('uses'), bState.map(function(st){ return st.line.length===st.words.length; }), mcAnswered('place'), shortData.map(function(_, i){ return val('sa'+i).length>0; })); } },
+  { label:'Lectura', tab:'le', items:function(){ return mcAnswered('read').concat([huntChecked], mcAnswered('when'), idsFilled('r_',5)); } },
+  { label:'Pronunciación', tab:'pr', items:function(){ return prState.map(function(s){ return s.passed; }); } },
+  { label:'Tarea', tab:'ta', items:function(){ return [val('recTitle').length>0, val('taskText').length>0, taskChecked]; } },
+  { label:'Video Log 3', tab:'vl', items:function(){ return VL_PARTS.map(function(_, i){ return vlText(i).length>0; }).concat([vlCamera]); } },
+  { label:'Juegos', tab:'ju', items:function(){ return [MATCH.w.finished, MATCH.m.finished, gFinished].concat(mcAnswered('quiz')); } }
+];
+function completionStats(){ return completionGroups.map(function(g){ var a=g.items(); return { label:g.label, tab:g.tab, done:a.filter(Boolean).length, total:a.length }; }); }
+function computeScore(){
+  var correct=0, total=0;
+  BLANK_SETS.forEach(function(b){ correct+=blanksCorrect(b[0],b[1]); total+=b[1]; });
+  ['uses','place','read','when','quiz'].forEach(function(k){ correct+=mcCorrect(k); total+=MC_SETS[k].length; });
+  bState.forEach(function(_, i){ if(builderOk(i)) correct++; }); total+=bState.length;
+  shortData.forEach(function(_, i){ if(val('sa'+i) && gradeShort(i).ok) correct++; }); total+=shortData.length;
+  correct+=huntScore; total+=HUNT_TOTAL;
+  correct+=prState.filter(function(s){ return s.passed; }).length; total+=prState.length;
+  var crit=taskCriteria(); correct+=crit.filter(function(c){return c.met;}).length; total+=crit.length;
+  var vc=vlCriteria(); correct+=vc.filter(function(c){return c.met;}).length; total+=vc.length;
+  correct+=MATCH.w.matched+MATCH.m.matched; total+=MATCH.w.data.length+MATCH.m.data.length;
+  correct+=gScore; total+=gameData.length;
+  return { correct:correct, total:total };
+}
+var READY=false;
+function updateCompletion(){
+  if(!READY) return;
+  var stats=completionStats(), d=0, t=0; stats.forEach(function(g){ d+=g.done; t+=g.total; });
+  var pct=t?Math.round(d/t*100):0;
+  document.getElementById('completionPct').textContent=pct+'%'; document.getElementById('pf').style.width=pct+'%';
+  document.getElementById('completionLegend').innerHTML=stats.map(function(g){ return '<button type="button" class="legend-pill '+(g.done===g.total?'done':'')+'" onclick="jumpTab(\''+g.tab+'\')">'+g.label+' '+g.done+'/'+g.total+'</button>'; }).join('');
+  updateScore();
+}
+function jumpTab(tab){ var btns=document.querySelectorAll('.tab'); for(var i=0;i<btns.length;i++){ if((btns[i].getAttribute('onclick')||'').indexOf("'"+tab+"'")!==-1){ switchTab(tab, btns[i]); return; } } switchTab(tab, null); }
+document.addEventListener('input', function(e){ if(e.target && /^(taskText|recIng|recTitle)$/.test(e.target.id)) renderTask(); if(e.target && /^vl\d$/.test(e.target.id)) renderVL(); updateCompletion(); });
+document.addEventListener('change', updateCompletion);
+
+/* ── Report ── */
+function buildReportHtml(name){
+  var stamp=new Date().toLocaleString('en-US',{ year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' });
+  var blanks=BLANK_SETS.map(function(b){ return collectBlanks(b[0], b[1], b[2]); });
+  var bc=0, bt=0; blanks.slice(0,3).forEach(function(g){ bc+=g.correct; bt+=g.total; });
+  var cnt=function(a){ return a.filter(function(x){return x.ok;}).length; };
+  var usItems=mcItemsFor('uses', usesData), plItems=mcItemsFor('place', placeData), rdItems=mcItemsFor('read', readData), whItems=mcItemsFor('when', whenData), qzItems=mcItemsFor('quiz', quizData);
+  var bdItems=bState.map(function(_, i){ return { label:String(i+1), value:builderText(i), ok:builderOk(i), msg:builderOk(i)?'Correcto.':'Correcta: '+BUILD[i].s }; });
+  var saItems=shortData.map(function(s, i){ var v=val('sa'+i), r=gradeShort(i); return { label:s.q, value:v, ok:r.ok, msg:r.msg }; });
+  var huntItem=[{ label:'Caza de verbos', value:huntChecked?(huntScore+' / '+HUNT_TOTAL):'', ok:huntScore===HUNT_TOTAL, msg:huntChecked?(huntScore===HUNT_TOTAL?'¡Perfecto!':'Busca -aba / -ía en el párrafo 2.'):'Sin hacer.' }];
+  var prItems=PR_WORDS.map(function(w, i){ var s=prState[i]; return { label:w.es, value: s.tries?(s.best+'% · '+s.tries+' intento'+(s.tries===1?'':'s')):'', ok:s.passed, msg: s.heard?('Escuchó: '+s.heard):'' }; });
+  var crit=taskCriteria(), critMet=crit.filter(function(c){return c.met;}).length, a=taskAnalysis();
+  var critItems=crit.map(function(c){ return { label:'Criterio', value:c.txt, ok:c.met, msg:c.met?'Cumplido.':'Falta.' }; });
+  var vla=vlAnalysis(), vlc=vlCriteria(), vlMet=vlc.filter(function(c){return c.met;}).length;
+  var vlItems=vlc.map(function(c){ return { label:'Criterio', value:c.txt, ok:c.met, msg:c.met?'Cumplido.':'Falta.' }; });
+  var vlScript=VL_PARTS.map(function(p, i){ var t=vlText(i); return '<h3>'+(i+1)+' · '+escapeHtml(p.es)+'</h3>'+(t?'<div class="para">'+escapeHtml(t)+'</div>':'<p class="blanktxt">(en blanco)</p>'); }).join('');
+  var gameItems=[{ label:'Juego 1 · La vida y el trabajo', value:MATCH.w.matched+' / '+MATCH.w.data.length, ok:MATCH.w.finished, msg:MATCH.w.finished?'Completado.':'Sin terminar.' },
+    { label:'Juego 2 · ¿Cómo era?', value:MATCH.m.matched+' / '+MATCH.m.data.length, ok:MATCH.m.finished, msg:MATCH.m.finished?'Completado.':'Sin terminar.' },
+    { label:'Juego 3 · Reto rápido', value:gFinished?(gScore+' / '+gameData.length):'', ok:gFinished&&gScore>=10, msg:gFinished?(gScore>=10?'¡Bien dominado!':'Practica un poco más.'):'Sin terminar.' }];
+  var s=computeScore(), sp=s.total?Math.round(s.correct/s.total*100):0;
+  var stats=completionStats(), cd=0, ct=0; stats.forEach(function(g){ cd+=g.done; ct+=g.total; }); var cp=ct?Math.round(cd/ct*100):0;
+  var compRows=stats.map(function(g){ return '<li class="'+(g.done===g.total?'checked':'')+'">'+(g.done===g.total?'☑':'☐')+' '+escapeHtml(g.label)+' · '+g.done+' / '+g.total+'</li>'; }).join('');
+  var blank='<p class="blanktxt">(en blanco)</p>';
+  var inf='<h3>Persona entrevistada</h3>'+(a.who?'<div class="para"><strong>'+escapeHtml(a.who)+'</strong></div>':blank)+(a.notes?'<h3>Notas</h3><div class="para">'+escapeHtml(a.notes).replace(/\n/g,'<br>')+'</div>':'')+'<h3>Informe</h3>'+(a.raw?'<div class="para">'+escapeHtml(a.raw).replace(/\n/g,'<br>')+'</div>':blank);
+  var prPassed=prState.filter(function(x){ return x.passed; }).length, prAvg=Math.round(prState.reduce(function(t, x){ return t+x.best; }, 0)/prState.length);
+  return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Semana 7 · Reporte · '+escapeHtml(name)+'</title><style>'+
+  "body{font-family:Georgia,'Times New Roman',serif;color:#2A2118;max-width:850px;margin:0 auto;padding:40px 32px;line-height:1.6;}"+
+  'header{border-bottom:4px solid #C45D3A;padding-bottom:16px;margin-bottom:28px;} h1{font-size:1.6rem;color:#1B2A4A;margin:0 0 6px;}'+
+  ".meta{font-family:'Courier New',monospace;font-size:0.78rem;color:#6B5D4A;} .meta strong{color:#1B2A4A;}"+
+  '.summary{background:#FBF5EA;border-left:5px solid #D4A24C;padding:14px 18px;margin-bottom:28px;font-size:0.95rem;}'+
+  'h2{font-size:1.1rem;color:#1B2A4A;margin:32px 0 10px;border-left:5px solid #C45D3A;padding-left:12px;}'+
+  "h3{font-size:0.78rem;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:0.06em;color:#6B5D4A;margin:18px 0 6px;font-weight:normal;}"+
+  ".score{font-family:'Courier New',monospace;font-size:0.72rem;font-weight:normal;color:#6B5D4A;display:block;padding-top:2px;}"+
+  'table{width:100%;border-collapse:collapse;font-size:0.86rem;margin-bottom:8px;} td{padding:8px 10px;border-bottom:1px solid #EDE2CE;vertical-align:top;}'+
+  "td.num{color:#6B5D4A;font-family:'Courier New',monospace;font-size:0.75rem;} td.note{font-size:0.78rem;color:#6B5D4A;font-style:italic;} td.mark{text-align:center;font-weight:bold;width:26px;}"+
+  'tr.ok{background:#F2F8EE;} tr.ok td.mark{color:#4C7A3C;} tr.bad{background:#FCF0EE;} tr.bad td.mark{color:#A8452A;}'+
+  '.para{background:#fff;border:1px solid #EDE2CE;border-radius:6px;padding:14px 18px;font-size:0.95rem;line-height:1.7;}'+
+  '.blanktxt{color:#A89A88;} ul.check{list-style:none;padding:0;font-size:0.9rem;} ul.check li{padding:5px 0;border-bottom:1px solid #F2EADB;} ul.check li.checked{color:#4C7A3C;}'+
+  "footer{margin-top:40px;border-top:1px solid #EDE2CE;padding-top:12px;font-family:'Courier New',monospace;font-size:0.68rem;color:#6B5D4A;}"+
+  '@media print{body{padding:0;}h2{page-break-after:avoid;}table{page-break-inside:avoid;}}'+
+  '</style></head><body>'+
+  '<header><h1>Spanish 122 · Semana 7 · Capítulo 7 · Generaciones</h1><p class="meta"><strong>Estudiante:</strong> '+escapeHtml(name)+' &nbsp;·&nbsp; <strong>Describing the Past</strong> &nbsp;·&nbsp; Generado: '+escapeHtml(stamp)+'</p></header>'+
+  '<div class="summary"><strong>Puntuación:</strong> '+s.correct+' / '+s.total+' correctas (<strong>'+sp+'%</strong>) · Página completada al <strong>'+cp+'%</strong> ('+cd+' / '+ct+' elementos)</div>'+
+  '<h2>Progreso por sección</h2><ul class="check">'+compRows+'</ul>'+
+  reportTable('Ejercicios 1, 2 y 4 (fill-in)', bc+' / '+bt+' correctas', blanks.slice(0,3))+
+  reportTable('Ejercicio 3 · Los 4 usos', cnt(usItems)+' / '+usItems.length+' correctas', [{ heading:'¿Por qué el imperfecto?', items:usItems }])+
+  reportTable('Ejercicio 5 · Constructor de oraciones', cnt(bdItems)+' / '+bdItems.length+' correctas', [{ heading:'Antes y ahora', items:bdItems }])+
+  reportTable('Ejercicio 6 · Errores comunes', cnt(plItems)+' / '+plItems.length+' correctas', [{ heading:'¿Cuál es correcta?', items:plItems }])+
+  reportTable('Ejercicio 7 · Respuesta corta', cnt(saItems)+' / '+saItems.length+' válidas', [{ heading:'Tu infancia', items:saItems }])+
+  reportTable('Lectura · Familias de Yakima y Wenatchee', (cnt(rdItems)+cnt(whItems)+blanks[3].correct)+' / '+(rdItems.length+whItems.length+blanks[3].total)+' correctas', [{ heading:'A · Comprensión', items:rdItems }, { heading:'B · Caza de verbos', items:huntItem }, { heading:'C · ¿Antes o ahora?', items:whItems }, blanks[3]])+
+  reportTable('Pronunciación', prPassed+' / '+PR_WORDS.length+' aprobadas · promedio '+prAvg+'% · '+prPoints()+' puntos', [{ heading:'Palabras y frases', items:prItems }])+
+  '<h2>Tarea · Entrevista a una persona mayor<span class="score">'+critMet+' / '+crit.length+' criterios · '+a.sentences+' oraciones · '+a.words+' palabras</span></h2>'+inf+
+  reportTable('', '', [{ heading:'Checklist', items:critItems }])+
+  '<h2>Video Log 3 · Borrador del guion<span class="score">'+vlMet+' / '+vlc.length+' criterios · '+vla.words+' palabras · ≈ '+fmtMin(vla.mins)+' min</span></h2>'+vlScript+
+  reportTable('', '', [{ heading:'Checklist', items:vlItems }])+
+  reportTable('Juegos', cnt(qzItems)+' / '+qzItems.length+' en el quiz', [{ heading:'Emparejamiento y reto', items:gameItems }, { heading:'Juego 4 · Opción múltiple', items:qzItems }])+
+  '<footer>South Puget Sound Community College · ESP 122 · Semana 7 · Para entregar como PDF, abre este archivo, imprime y elige Guardar como PDF.</footer></body></html>';
+}
+function downloadReport(){
+  var field=document.getElementById('studentName'), name=(field.value||'').trim();
+  if(!name){ field.focus(); field.style.borderColor='#A8452A'; field.placeholder='Escribe tu nombre primero · Please enter your name'; setTimeout(function(){ field.style.borderColor=''; },2500); return; }
+  var html=buildReportHtml(name), safe=name.replace(/[^a-z0-9]+/gi,'_').replace(/^_+|_+$/g,'')||'estudiante';
+  var blob=new Blob([html],{type:'text/html;charset=utf-8'}), url=URL.createObjectURL(blob), a=document.createElement('a');
+  a.href=url; a.download='Semana7_Cap7_'+safe+'.html'; document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function(){ URL.revokeObjectURL(url); },1000);
+}
+
+/* ── Build everything ── */
+buildFlash('stages','fcStages','time-card');
+buildFlash('events','fcEvents','carn-card');
+buildFlash('gen','fcGen','nat-card');
+buildFlash('work','fcWork','sea-card');
+buildFlash('time','fcTime','sport-card');
+buildMC(usesData, 'uses', 'usesCont');
+buildMC(placeData, 'place', 'placeCont');
+buildMC(readData, 'read', 'readCont');
+buildMC(whenData, 'when', 'whenCont');
+buildMC(quizData, 'quiz', 'quizCont');
+buildBuilders();
+buildHunt();
+buildMatch('w');
+buildMatch('m');
+buildShort();
+renderTask();
+buildVL();
+prInit();
+READY = true;
+startGame();
+updateCompletion();
+
+</script>
+</body>
+</html>
